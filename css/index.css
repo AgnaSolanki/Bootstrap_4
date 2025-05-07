@@ -16,15 +16,103 @@
   overflow: visible;
   display: block !important;
 }
-
+/* Hide navbar */
+.navbar-hidden {
+  display: none !important;
+}
+.text-success-color {
+  color: #51e66a;
+}
+.text-success-color1 {
+  color: #51e66a;
+  font-weight: bold !important;
+  font-size: 40px;
+}
+.heading-text {
+  font-size: large;
+}
+.para-text {
+  font-size: 0.9rem;
+  color: rgb(238, 226, 226);
+}
 .btn-btn {
   background-color: #8bc34a;
   color: white;
   box-shadow: 0px 1px 1px #8bc34a;
+  height: 30px;
+  font-size: small;
+  font-weight: 500;
 }
 .btn-btn:hover {
   background-color: #75b130;
   color: white;
+}
+.navbar-nav .nav-item :focus {
+  background-color: #fff;
+  color: #41d65a;
+}
+/* Ensure nav links are left-aligned in toggled state (small screen) */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    align-items: flex-start !important;
+    color: #000 !important;
+    width: 100%;
+  }
+  .navbar-nav .nav-item {
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000 !important;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .navbar-nav:hover,
+  .navbar-nav:focus-within,
+  .navbar-nav:active {
+    align-items: flex-start !important;
+    color: #41d65a !important;
+    background-color: white !important;
+  }
+  /* Base style for dropdown toggle */
+  .navbar-nav .dropdown-toggle::after {
+    color: #000; /* default color */
+    transition: color 0.3s ease;
+  }
+
+  /* Change icon color on hover or focus */
+  .navbar-nav .dropdown-toggle:hover::after,
+  .navbar-nav .dropdown-toggle:focus::after {
+    color: #41d65a; /* your desired hover color */
+  }
+
+  /* Contact button reset styles */
+  .navbar-nav .contact-btn {
+    background-color: transparent !important;
+    color: #000 !important;
+    text-align: left;
+    padding-left: 0px !important;
+  }
+
+  /* Dropdown toggle alignment fix */
+  .navbar-nav .dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: #000 !important;
+    background-color: white;
+    padding-left: 0;
+  }
+}
+
+.navbar-brand {
+  font-size: 1.7rem;
+  font-weight: 600 !important;
 }
 .navbar-brand span {
   color: #8bc34a;
@@ -37,7 +125,7 @@
 .contact-btn {
   background-color: #111;
   border-radius: 40px;
-  padding: 10px 20px 10px 20px !important;
+  padding: 7px 22px 7px 22px !important;
   color: white !important;
   font-weight: 500;
   transition: background-color 0.3s;
@@ -48,33 +136,57 @@
 .nav-link:hover {
   color: #8bc34a;
 }
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
 
+.custom-toggler {
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+/* Container for the 3 lines */
 .custom-toggler-icon {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 22px;
+  align-items: flex-start;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+/* Lines - default state */
+.custom-toggler-icon .line {
+  height: 3px;
+  background-color: #000; /* Default line color */
+  transition: background-color 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Individual widths */
+.custom-toggler-icon .top,
+.custom-toggler-icon .bottom {
+  width: 16px;
+}
+
+.custom-toggler-icon .middle {
   width: 24px;
-  padding: 4px 0;
 }
 
-.custom-toggler-icon span {
-  display: block;
-  height: 4px;
-  width: 100%;
-  background-color: #000; /* Default black */
-  border-radius: 4px;
-  transition: background-color 0.3s;
+.custom-toggler:hover .line {
+  background-color: #8bc34a;
 }
 
-/* Hover or focus */
-.custom-toggler:hover .custom-toggler-icon span,
-.custom-toggler:focus .custom-toggler-icon span {
-  background-color: #8bc34a; /* Green on hover/focus */
+.custom-toggler:hover .custom-toggler-icon,
+.custom-toggler:hover .custom-toggler-icon::before,
+.custom-toggler:hover .custom-toggler-icon::after {
+  color: #8bc34a !important; /* Green color on hover */
 }
 
 /* When menu is open (aria-expanded="true") */
-.navbar-toggler[aria-expanded="true"] .custom-toggler-icon span {
+.navbar-toggler[aria-expanded="true"] .custom-toggler-icon .line {
   background-color: #8bc34a; /* Green when toggled */
 }
 .shadow-nav {
@@ -115,43 +227,33 @@
   }
 }
 
+.bg-grid {
+  margin-top: 30px;
+}
 /* Animation trigger class */
 .main-content.bounce {
   animation: bounceDownReturn 0.4s ease;
 }
 
-.anime {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: moveup 1s linear forwards;
-}
-@keyframes moveup {
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
 .hero-section {
-  background-image: linear-gradient(to right, #eaeaea 1px, transparent 1px),
-    linear-gradient(to bottom, #eaeaea 1px, transparent 1px);
-  background-size: 60px 60px;
-  background-position: 35px 35px;
-  background-attachment: fixed !important;
-  background-color: white;
-  min-height: 100vh; /* Full viewport height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: 100vh;
   position: relative;
-  z-index: 1; /* Grid background at the bottom */
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 4rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../images/ChatGPT\ Image\ May\ 6\,\ 2025\,\ 07_09_47\ PM.png");
 }
+
 .hero-section2 {
-  background-image: linear-gradient(to right, #eaeaea 1px, transparent 1px),
-    linear-gradient(to bottom, #eaeaea 1px, transparent 1px);
-  background-size: 60px 60px;
-  background-position: 35px 35px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../images/ChatGPT\ Image\ May\ 6\,\ 2025\,\ 07_09_47\ PM.png");
   background-attachment: fixed !important;
-  background-color: white;
+
   min-height: 50vh;
   padding-top: 30px; /* Full viewport height */
 }
@@ -169,11 +271,18 @@
   align-items: center;
   color: white;
   margin-top: 20px;
-  transform: translateY(30px); /* Initially positioned below */
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(60px);
+  opacity: 0;
+  transition: opacity 1.2s ease, transform 1.2s ease;
 }
+
+/* Triggered when in view */
 .cta-banner.animate {
-  animation: slideUp 0.4s ease forwards;
+  transform: translateY(0px);
+  opacity: 1;
+}
+.banner-text {
+  width: 50%;
 }
 
 .grid-bg img {
@@ -184,12 +293,12 @@
 }
 
 .circle-icon {
-  width: 90px;
-  height: 90px;
-  background-color: rgb(1, 148, 1);
+  width: 70px;
+  height: 70px;
+  background-color: rgb(156, 233, 156);
 
   border-radius: 50%;
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   color: white;
   display: flex;
   justify-content: center;
@@ -209,7 +318,7 @@
 
 .logo-track {
   display: flex;
-  animation: scrollSteps 63s steps(7) infinite;
+  animation: scrollSteps 25s steps(10) infinite;
   width: calc((250px + 2rem) * 7); /* width for all 7 logos */
   gap: 2rem;
 }
@@ -218,22 +327,15 @@
   flex: 0 0 auto;
   width: 250px;
   height: auto;
+  margin-right: 2rem;
 }
 
 @keyframes scrollSteps {
   0% {
-    transform: translateX(30vw);
+    transform: translateX(0);
   }
-  /* card on stage */
-  20%,
-  80% {
-    opacity: 1;
-    transform: none;
-  }
-  /* card exit */
   100% {
-    transform: translateX(90%) scale(0.98);
-    opacity: 0;
+    transform: translateX(-50%);
   }
 }
 
@@ -250,11 +352,11 @@
   height: 100%;
 }
 .cta-banner1 {
-  background-color: #e2e0e0;
+  background-color: #f7f4f4;
   border-radius: 100px;
 
   width: 100%; /* full width minus side margin */
-  height: 13%;
+  height: 11%;
   bottom: 0px;
   left: 2rem;
 
@@ -267,11 +369,11 @@
 .circle-icon1 {
   width: 60px;
   height: 60px;
-  background-color: rgb(1, 148, 1);
+  background-color: rgb(132, 230, 132);
 
   border-radius: 50%;
   font-size: 2rem;
-  color: rgb(143, 138, 138);
+  color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -280,10 +382,6 @@
   background-color: #fff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s ease;
-}
-
-.process-card:hover {
-  transform: translateY(-5px);
 }
 
 .process-card .step-number {
@@ -308,19 +406,16 @@
 .bg- {
   background-color: rgb(240, 235, 235);
 }
-.btn-- {
-  width: 60%;
-  background-color: #000;
-  padding: 13px 21px;
-  color: white;
-  border-radius: 40px;
-  font-weight: bold;
-}
 
 .imgs {
   border-radius: 30px;
   height: 70%;
   width: 100%;
+}
+.img-img {
+  height: 520px;
+  width: 100%;
+  margin-right: 10%;
 }
 /* Modal styling */
 .video-modal {
@@ -385,6 +480,11 @@
   cursor: pointer;
   transition: transform 0.3s;
   z-index: 10;
+}
+.play-btn:hover,
+:focus {
+  background-color: #4cd964;
+  color: white;
 }
 
 .portfolio-section {
@@ -453,25 +553,27 @@
   border-radius: 0;
 }
 
-.accordion-button:focus {
+.accordion-button:focus,
+:active {
   outline: none;
   box-shadow: none;
-  background: white;
-  border: none;
+  background-color: white !important;
+  border: none !important;
 }
 
 .accordion-button .question-number {
   font-size: 22px;
   font-weight: bolder;
   margin-right: 10px;
+  border-bottom: none !important;
 }
 
 .accordion-button .arrow-icon {
   margin-left: auto;
   font-size: 20px;
-  font-weight: bolder;
+  font-weight: 700 !important;
   transition: transform 0.3s ease, color 0.3s ease;
-  color: #555;
+  color: #000000;
 }
 
 /* Color + arrow flip on open */
@@ -487,13 +589,16 @@
 .accordion-body {
   padding: 20px;
   color: #666;
-  background-color: #fafafa;
+  background-color: #ffffff;
   font-size: 16px;
   line-height: 1.6;
-  border-top: 1px solid #eee;
 }
+.accordion-button::after {
+  display: none !important; /* hides Bootstrap arrow */
+}
+
 .subscribe {
-  background-image: url("https://img.pikbest.com/backgrounds/20190527/exquisite-black-checkered-background_2764728.jpg!w700wp");
+  background-image: url("../images/ChatGPT\ Image\ May\ 7\,\ 2025\,\ 03_01_08\ PM.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -541,7 +646,7 @@
   color: black;
 }
 .bg-- {
-  background-color: #4caf50;
+  background-color: #6ed872;
 }
 .testimonial-section {
   padding: 60px 20px;
@@ -580,8 +685,9 @@
 
 .testimonial-container {
   max-width: 100%;
-  margin: 60px auto 0 auto;
+  margin: 60px;
   overflow: hidden;
+  margin-right: 150px !important;
 }
 
 .testimonial-slider {
@@ -645,10 +751,6 @@
   transition: transform 0.3s ease;
 }
 
-.blog-card:hover {
-  transform: translateY(-5px);
-}
-
 .blog-card img {
   height: 250px;
   object-fit: cover;
@@ -669,7 +771,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-left: 10px;
+  margin-left: 90px;
 }
 
 .footer-logo {
@@ -697,7 +799,10 @@
   list-style: none;
   padding: 0;
 }
-
+.footer-bottom {
+  margin-left: 90px !important;
+  margin-right: 100px !important;
+}
 .color > i {
   color: #4caf50;
   padding-right: 8px;
@@ -708,8 +813,12 @@
 /* 404 */
 
 .error {
-  color: #4cd964;
-  font-size: 2rem;
+  color: #41d65a;
+  font-size: 7rem;
+  font-weight: bolder;
+}
+#section19 {
+  padding-left: 5rem !important;
 }
 
 /* contact  */
@@ -783,7 +892,7 @@
 .cta-banner2 {
   background-color: #fff;
   border-radius: 100px;
-  padding: 1rem 1rem;
+  padding: 0.5rem 1rem;
   width: 100%;
   display: flex; /* Make it horizontal */
   align-items: center; /* Vertically center items */
@@ -818,4 +927,346 @@
 #section15 + section {
   position: relative;
   z-index: 1;
+}
+.list li {
+  list-style-type: none;
+  color: grey;
+}
+
+/* team  */
+
+.team-card {
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-body h5 {
+  font-weight: bold;
+}
+
+.role {
+  color: green;
+  font-size: 0.9rem;
+}
+
+.arrow-wrapper1 {
+  position: absolute;
+  top: 40%;
+  right: -2px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.arrow-main {
+  background: #e9f5e9;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  transition: background 0.3s;
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.5rem;
+  overflow: hidden;
+  max-width: 0;
+  opacity: 0;
+  transition: max-width 0.5s ease, opacity 0.5s ease;
+}
+
+.team-card:hover .social-icons {
+  max-width: 200px;
+  opacity: 1;
+}
+
+.social-icons a {
+  background: #e9f5e9;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  transition: background 0.3s, transform 0.3s;
+}
+
+/* faq  */
+
+.question-box {
+  position: sticky;
+  top: 100px; /* adjust depending on header height */
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  height: 320px;
+  margin-right: 30px;
+  margin-left: 15px;
+  z-index: 10;
+}
+.avatar-group {
+  display: flex;
+}
+
+.avatar-group img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-left: -15px;
+}
+
+.avatar-group img:first-child {
+  margin-left: 0;
+}
+
+.btn-contact {
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  width: 60%;
+  margin-top: 1rem;
+  padding: 1rem 0.5rem;
+  border-radius: 2rem;
+  transition: background 0.3s;
+}
+
+/* price plan  */
+
+/* Wrapper gives room at bottom for overlap */
+.pricing-header {
+  padding-bottom: 130px !important;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.pricing-overlap {
+  margin-top: -8rem;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 24px;
+}
+
+/* Pricing card layout */
+.pricing-section {
+  background-color: #f5f5f5;
+  padding: 2rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Individual pricing cards */
+.pricing-card {
+  background: #f5f5f5;
+
+  padding: 0rem 1.5rem;
+  text-align: center;
+}
+
+/* Price styling */
+.price {
+  color: #28a745;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Month badge */
+.badge-month {
+  background: #f1f1f1;
+  border-radius: 2rem;
+  padding: 0.25rem 1rem;
+  font-size: 0.75rem;
+}
+
+/* Feature list */
+.features {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.features li {
+  list-style: none;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.features li i {
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Icons */
+.checked {
+  color: black;
+}
+
+.unchecked {
+  color: #ccc;
+}
+
+/* Button */
+.btn-learn {
+  background-color: #000;
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  transition: background 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-learn:hover {
+  background-color: #333;
+}
+
+.note {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  color: #666;
+}
+
+.pricing-wrapper {
+  position: relative;
+}
+
+/* animation 
+ */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(150px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-wrapper {
+  position: relative;
+  display: inline-block;
+  height: 3rem;
+}
+
+.btn-wrapper .icon {
+  position: absolute;
+  left: 0;
+  top: 73.5px;
+  transform: translateY(-50%);
+  background-color: #4ccc73;
+  width: 4rem;
+  height: 2.9rem;
+  border-radius: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: 15px;
+  color: white;
+  z-index: 1;
+}
+
+.btn-- {
+  width: 100%;
+  padding: 0.75rem 2rem;
+  padding-left: 2.5rem;
+  border-radius: 40px;
+  font-weight: bold;
+  position: relative;
+  background-color: #0d0d0d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 2;
+}
+
+.btn-wrapper:hover .btn-- {
+  transform: translateX(2.3rem);
+  background-color: #000;
+  color: white;
+}
+.counter {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4ccc73;
+  overflow: hidden;
+  display: inline-block;
+  height: 1em;
+}
+
+.number {
+  display: inline-block;
+  animation: countup 2s steps(14) forwards;
+}
+
+@keyframes countup {
+  from {
+    content: "0";
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-1400%); /* 72 steps * 100% */
+  }
+}
+/* Base styles for Contact button */
+
+/* On hover or focus: make background transparent and text black */
+.nav-link.contact-btn:hover,
+.nav-link.contact-btn:focus,
+.nav-link.contact-btn:active {
+  background-color: transparent !important;
+  color: #41d65a !important;
+  outline: none;
+}
+
+/* Remove dropdown borders */
+.dropdown-menu {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.dropdown :focus {
+  background-color: #fff;
+  color: #41d65a !important;
+}
+.dropdown-menu .dropdown-item {
+  color: black !important;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for dropdown items */
+.dropdown-menu .dropdown-item:hover {
+  background-color: #ffffff !important; /* Light gray background */
+  color: #41d65a !important; /* Optional hover color */
 }

@@ -24,18 +24,24 @@
   <body>
     <header>
       <nav
-        class="navbar navbar-dark bg-dark d-flex justified-content-beetween fixed-top"
+        class="navbar navbar-dark bg-dark d-flex justify-content-beetween fixed-top py-0"
       >
         <a class="navbar-brand px-3" href="#">
-          <img src="./images/image.png" width="160" height="25" alt="" />
+          <img src="./images/image.png" width="120" height="18" alt="" />
         </a>
-        <button class="btn btn-btn my-2 my-sm-0 px-3 py-1 me-3" type="submit">
+        <button class="btn btn-sm btn-btn my-1 my-sm-0 px-3 me-3" type="submit">
           Buy now
         </button>
       </nav>
-      <nav class="navbar navbar-expand-lg bg-white py-3 shadow-nav mt-5">
-        <div class="container-fluid">
-          <a class="navbar-brand fw-bold" href="#"> digiqu<span>.</span> </a>
+
+      <nav
+        id="mainNav"
+        class="navbar navbar-expand-lg bg-white py-4 shadow-nav mt-4 d-flex justify-content-around px-5"
+      >
+        <div class="container px-5">
+          <a class="navbar-brand fw-bold ps-2" href="#">
+            digiqu<span>.</span>
+          </a>
           <button
             class="navbar-toggler custom-toggler border-0 p-0"
             type="button"
@@ -46,9 +52,10 @@
             aria-label="Toggle navigation"
           >
             <span class="custom-toggler-icon">
-              <span></span>
-              <span></span>
-              <span></span>
+              <span class="line top"></span>
+              <span class="line middle"></span>
+              <span class="line bottom"></span>
+              <span class="line middle"></span>
             </span>
           </button>
 
@@ -167,12 +174,15 @@
       </nav>
     </header>
 
-    <section id="section1" class="section hero-section py-5 d-flex flex-column">
-      <div class="container-fluid position-relative bg-grid mb-5">
+    <section
+      id="section1"
+      class="container-fluid section hero-section py-5 d-flex flex-column"
+    >
+      <div class="container position-relative bg-grid">
         <div class="row align-items-center">
           <!-- Left text -->
-          <div class="col-lg-6 px-5 anime">
-            <p class="text-success fw-semibold">
+          <div class="col-lg-6 px-5 scroll-animate">
+            <p class="text-success-color fw-semibold">
               Your Trusted Partner for Innovative Digital Solutions
             </p>
             <h1 class="display-3 fw-bold">
@@ -186,7 +196,7 @@
               <img
                 src="./images/man.png"
                 alt="Hero"
-                class="img-fluid anime"
+                class="img-fluid scroll-animate pb-0 hero-img-touch"
                 style="max-height: 500px"
               />
             </div>
@@ -194,15 +204,17 @@
         </div>
 
         <!-- CTA outside .row so it spans full width -->
-        <div class="cta-banner mt-5">
+        <div class="cta-banner mt-5 mb-0">
           <div class="cta-icon me-3">
             <div class="circle-icon">
               <i class="fa-solid fa-arrow-right"></i>
             </div>
           </div>
-          <div>
-            <h5 class="mb-1 fw-semibold text-success">Get Started — Now</h5>
-            <p class="mb-0">
+          <div class="banner-text">
+            <h5 class="mb-1 fw-semibold heading-text text-success-color">
+              Get Started — Now
+            </h5>
+            <p class="mb-0 para-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut.
             </p>
@@ -210,15 +222,16 @@
         </div>
       </div>
     </section>
+    <!-- about us  -->
     <section
       id="section13"
       class="section hero-section2 d-flex flex-column pt-5"
     >
-      <div class="container-fluid position-relative bg-grid px-5">
+      <div class="container position-relative bg-grid px-5">
         <div class="row align-items-center">
           <!-- Left text -->
-          <div class="col-lg-6 px-5 anime">
-            <p class="text-success fw-semibold">
+          <div class="col-lg-6 px-5 scroll-animate mt-5">
+            <p class="text-success-color fw-semibold">
               Exploring the Expertise of Digiqu's Dynamic Team
             </p>
             <h1 class="display-3 fw-bold">About Us</h1>
@@ -236,8 +249,8 @@
       <div class="container-fluid position-relative bg-grid px-5">
         <div class="row align-items-center">
           <!-- Left text -->
-          <div class="col-lg-6 px-5 anime">
-            <p class="text-success fw-semibold">
+          <div class="col-lg-6 px-5 scroll-animate mt-5">
+            <p class="text-success-color fw-semibold">
               Exploring the Expertise of Digiqu's Dynamic Team
             </p>
             <h1 class="display-3 fw-bold">Service Details</h1>
@@ -262,8 +275,8 @@
           </div>
 
           <!-- Right: Text -->
-          <div class="col-lg-9 px-5 anime mt-5">
-            <p class="text-success fw-semibold mt-5">
+          <div class="col-lg-9 px-5 scroll-animate mt-5 class">
+            <p class="text-success-color fw-semibold mt-5">
               Empowering Your Vision: Unleashing Digiqu's Comprehensive Digital
               Services
             </p>
@@ -273,7 +286,215 @@
       </div>
     </section>
 
-    <section id="section24" class="section"></section>
+    <section id="section24" class="section pt-5">
+      <div class="container-fluid bg-light pt-5 mt-5">
+        <div class="row">
+          <div class="col-md-3 d-flex flex-column">
+            <div>
+              <h5 class="fw-semibold">Services</h5>
+              <p class="text-secondary">Web Design and Development</p>
+            </div>
+            <div>
+              <h5 class="fw-semibold">Clients</h5>
+              <p class="text-secondary">XYZ Corporation</p>
+            </div>
+            <div>
+              <h5 class="fw-semibold">Locations</h5>
+              <p class="text-secondary">Modesto, California</p>
+            </div>
+            <div>
+              <h5 class="fw-semibold">Date</h5>
+              <p class="text-secondary">Jan 04, 2023</p>
+            </div>
+          </div>
+          <div class="col-md-9 scroll-animate">
+            <div>
+              <h2 class="fw-semibold">Project Overview</h2>
+              <p class="text-secondary">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus
+                qui dolorem fugiat dolore doloribus cupiditate ad praesentium
+                accusantium in exercitationem obcaecati deserunt nulla eum
+                soluta est necessitatibus quidem aspernatur rerum placeat
+                suscipit quaerat, pariatur distinctio!
+              </p>
+
+              <p class="text-secondary">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Commodi inventore fuga error. Neque quam dolore asperiores ut ea
+                pariatur, nihil, nam earum molestias voluptas accusamus?
+              </p>
+
+              <p class="text-secondary">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Commodi inventore fuga error. Neque quam dolore asperiores ut ea
+                pariatur, nihil, nam earum molestias voluptas accusamus?
+              </p>
+              <img
+                src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/business-people-meeting-and-laptop-for-collaborat-2022-12-22-19-29-34-utc-800x533.jpg"
+                alt="img"
+                class="img-fluid rounded-4"
+              />
+              <img
+                src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/shot-of-a-group-of-businesspeople-using-a-digital-2023-01-09-22-20-18-utc-800x532.jpg"
+                alt="img"
+                class="img-fluid rounded-4"
+              />
+            </div>
+            <div>
+              <h2 class="fw-bold mx-4">Key Features and Achievements</h2>
+              <ul class="list">
+                <li class="color">
+                  <i class="fa-regular fa-circle-dot"></i> Conducting in-depth
+                  research using a variety of tools and resources
+                </li>
+                <li class="color">
+                  <i class="fa-regular fa-circle-dot"></i>Analyzing data and
+                  synthesizing information into a cohesive report
+                </li>
+                <li class="color">
+                  <i class="fa-regular fa-circle-dot"></i>Developing research
+                  proposals and methodologies
+                </li>
+                <li class="color">
+                  <i class="fa-regular fa-circle-dot"></i> Reviewing and
+                  analyzing academic literature
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="fw-bold mx-4">Results and Impact</h2>
+              <p class="text-secondary">
+                Enim ut sem viverra aliquet eget sit amet tellus cras. Vitae
+                sapien pellentesque habitant morbi tristique senectus et.
+                Quisque id diam vel quam elementum pulvinar. Egestas pretium
+                aenean pharetra magna ac.
+              </p>
+              <p class="text-secondary">
+                Lectus arcu bibendum at varius vel pharetra vel. Ipsum dolor sit
+                amet consectetur adipiscing. Neque sodales ut etiam sit amet
+                nisl. Vel orci porta non pulvinar. Iaculis at erat pellentesque
+                adipiscing commodo elit at imperdiet.
+              </p>
+            </div>
+            <div class="accordion" id="faqAccordion">
+              <!-- Accordion Item 1 -->
+              <div class="accordion-item rounded-5">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    <span class="question-number fw-bold">1.</span>
+                    What services do we offer?
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed do eiusmod tempor incididunt. Lorem ipsum dolor sit
+                      amet consectetur adipisicing elit. Eius earum ad sequi
+                      exercitationem est nulla, quam mollitia eos temporibus
+                      fuga.
+                    </p>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed do eiusmod tempor incididunt. Lorem ipsum dolor sit
+                      amet consectetur adipisicing elit. Eius earum ad sequi
+                      exercitationem est nulla, quam mollitia eos temporibus
+                      fuga.
+                    </p>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed do eiusmod tempor incididunt. Lorem ipsum dolor sit
+                      amet consectetur adipisicing elit. Eius earum ad sequi
+                      exercitationem est nulla, quam mollitia eos temporibus
+                      fuga.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Accordion Item 2 -->
+              <div class="accordion-item rounded-5">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    <span class="question-number fw-bold">2.</span>
+                    How do we collaborate?
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed do eiusmod tempor incididunt. Lorem ipsum dolor sit
+                      amet consectetur adipisicing elit. Eius earum ad sequi
+                      exercitationem est nulla, quam mollitia eos temporibus
+                      fuga. Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Earum, placeat?
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Accordion Item 3 -->
+              <div class="accordion-item rounded-5">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    <span class="question-number fw-bold">3.</span>
+                    Can we handle both small and large scale projects?
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed do eiusmod tempor incididunt. Lorem ipsum dolor sit
+                      amet consectetur adipisicing elit. Eius earum ad sequi
+                      exercitationem est nulla, quam mollitia eos temporibus
+                      fuga.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- faq  -->
     <section
@@ -283,8 +504,8 @@
       <div class="container-fluid position-relative bg-grid px-5">
         <div class="row align-items-center">
           <!-- Left text -->
-          <div class="col-lg-6 px-5 anime">
-            <p class="text-success fw-semibold">
+          <div class="col-lg-6 px-5 scroll-animate mt-5">
+            <p class="text-success-color fw-semibold">
               Exploring the Expertise of Digiqu's Dynamic Team
             </p>
             <h1 class="display-3 fw-bold">FAQs Page</h1>
@@ -295,6 +516,7 @@
         </div>
       </div>
     </section>
+
     <!-- team  -->
     <section
       id="section17"
@@ -303,8 +525,8 @@
       <div class="container-fluid position-relative bg-grid px-5">
         <div class="row align-items-center">
           <!-- Left text -->
-          <div class="col-lg-6 px-5 anime">
-            <p class="text-success fw-semibold">
+          <div class="col-lg-6 px-5 scroll-animate mt-5">
+            <p class="text-success-color fw-semibold">
               Exploring the Expertise of Digiqu's Dynamic Team
             </p>
             <h1 class="display-3 fw-bold">Team</h1>
@@ -312,6 +534,154 @@
 
           <!-- Right image with grid background -->
           <div class="col-lg-6 position-relative"></div>
+        </div>
+      </div>
+    </section>
+    <section id="section25" class="section">
+      <div class="container py-5">
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-4">
+            <div class="position-relative team-card bg-white">
+              <img
+                src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/portrait-of-a-young-businesswoman-using-a-digital-2022-09-27-15-33-38-utc.jpg"
+                alt="Alex Thompson"
+                class="team-img"
+              />
+              <div class="arrow-wrapper1">
+                <div class="arrow-main">
+                  <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="social-icons">
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+              </div>
+              <div class="card-body text-center">
+                <p class="role mb-1">CEO</p>
+                <h5>Alex Thompson</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="position-relative team-card bg-white">
+              <img
+                src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/portrait-of-a-confident-young-businesswoman-using-2022-09-30-21-40-30-utc.jpg"
+                alt="Alex Thompson"
+                class="team-img"
+              />
+              <div class="arrow-wrapper1">
+                <div class="arrow-main">
+                  <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="social-icons">
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+              </div>
+              <div class="card-body text-center">
+                <p class="role mb-1">CEO</p>
+                <h5>Alex Thompson</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="position-relative team-card bg-white">
+              <img
+                src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/cropped-shot-of-a-businesswoman-holding-a-digital-2022-12-10-00-23-21-utc.jpg"
+                alt="Alex Thompson"
+                class="team-img"
+              />
+              <div class="arrow-wrapper1">
+                <div class="arrow-main">
+                  <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="social-icons">
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+              </div>
+              <div class="card-body text-center">
+                <p class="role mb-1">CEO</p>
+                <h5>Alex Thompson</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-4">
+            <div class="position-relative team-card bg-white">
+              <img
+                src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/smiling-business-man-using-digital-tablet-2022-11-29-15-53-00-utc.jpg"
+                alt="Alex Thompson"
+                class="team-img"
+              />
+              <div class="arrow-wrapper1">
+                <div class="arrow-main">
+                  <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="social-icons">
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+              </div>
+              <div class="card-body text-center">
+                <p class="role mb-1">CEO</p>
+                <h5>Alex Thompson</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="position-relative team-card bg-white">
+              <img
+                src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/shot-of-a-young-businesswoman-using-a-digital-tabl-2022-10-06-02-02-28-utc.jpg"
+                alt="Alex Thompson"
+                class="team-img"
+              />
+              <div class="arrow-wrapper1">
+                <div class="arrow-main">
+                  <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="social-icons">
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+              </div>
+              <div class="card-body text-center">
+                <p class="role mb-1">CEO</p>
+                <h5>Alex Thompson</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="position-relative team-card bg-white">
+              <img
+                src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/welcome-to-the-digital-age-2023-01-09-19-31-06-utc.jpg"
+                alt="Alex Thompson"
+                class="team-img"
+              />
+              <div class="arrow-wrapper1">
+                <div class="arrow-main">
+                  <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="social-icons">
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+              </div>
+              <div class="card-body text-center">
+                <p class="role mb-1">CEO</p>
+                <h5>Alex Thompson</h5>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -323,8 +693,8 @@
       <div class="container-fluid position-relative bg-grid px-5">
         <div class="row align-items-center">
           <!-- Left text -->
-          <div class="col-lg-6 px-5 anime">
-            <p class="text-success fw-semibold">
+          <div class="col-lg-6 px-5 scroll-animate mt-5">
+            <p class="text-success-color fw-semibold">
               Exploring the Expertise of Digiqu's Dynamic Team
             </p>
             <h1 class="display-3 fw-bold">Pricing Plan</h1>
@@ -335,7 +705,196 @@
         </div>
       </div>
     </section>
+    <section class="section" id="section27">
+      <div class="pricing-wrapper position-relative">
+        <!-- Top Section (background, heading) -->
+        <div
+          class="container-fluid py-5 bg-light pricing-header scroll-animate"
+        >
+          <h1 class="fw-bold p-3">Choose the Plan That Works for You</h1>
+          <p class="text-secondary px-3 pb-5">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id magnam
+            animi minus aspernatur magni eius consequatur et optio quod ipsam?
+          </p>
+        </div>
+      </div>
+      <div class="container-fluid bg-dark pb-5">
+        <div class="container pricing-overlap scroll-animate">
+          <div class="pricing-section">
+            <div class="row g-4">
+              <!-- Plan 1 -->
+              <div class="col-md-4">
+                <div class="pricing-card">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <h3 class="fw-bold">Starter</h3>
+                    <span class="badge-month">Month</span>
+                  </div>
+                  <p class="text-muted mb-2 text-start">
+                    Lorem ipsum dolor sit amet
+                  </p>
+                  <h2 class="price text-start">
+                    $ <span class="count" data-target="499">0</span>
+                  </h2>
 
+                  <ul class="features mt-4">
+                    <li>
+                      <i class="fa-solid fa-square-check checked"></i>Design
+                      Consultation
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-square-check unchecked"></i>Site
+                      Visit
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-square-check checked"></i>Custom
+                      Furniture
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-square-check unchecked"></i>Design
+                      Consultation
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-square-check unchecked"></i>Project
+                      Management
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-square-check unchecked"></i>3D
+                      Walkthrough
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-square-check checked"></i
+                      >Satisfaction Guarantee
+                    </li>
+                  </ul>
+
+                  <div class="btn-wrapper">
+                    <span class="icon">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                    <button class="btn btn-- mt-5">Learn More — Now</button>
+                  </div>
+                  <p class="note text-start pt-5">*Free Consultations</p>
+                </div>
+              </div>
+
+              <!-- Plan 2 -->
+              <div class="col-md-4">
+                <div class="pricing-card">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <h3 class="fw-bold">Pro</h3>
+                    <span class="badge-month">Month</span>
+                  </div>
+                  <p class="text-muted mb-2 text-start">
+                    Lorem ipsum dolor sit amet
+                  </p>
+                  <h2 class="price text-start">
+                    $ <span class="count" data-target="899">0</span>
+                  </h2>
+
+                  <ul class="features mt-4">
+                    <li>
+                      <i class="fa-solid fa-square-check checked"></i>Design
+                      Consultation
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-square-check checked"></i>Site Visit
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-square-check checked"></i>Custom
+                      Furniture
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-square-check checked"></i>Design
+                      Consultation
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-square-check checked"></i>Project
+                      Management
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-square-check unchecked"></i>3D
+                      Walkthrough
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-square-check checked"></i
+                      >Satisfaction Guarantee
+                    </li>
+                  </ul>
+
+                  <div class="btn-wrapper">
+                    <span class="icon">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                    <button class="btn btn-- mt-5">Learn More — Now</button>
+                  </div>
+                  <p class="note text-start pt-5">*Free Consultations</p>
+                </div>
+              </div>
+
+              <!-- Plan 3 -->
+              <div class="col-md-4">
+                <div class="pricing-card">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <h3 class="fw-bold">Starter</h3>
+                    <span class="badge-month">Month</span>
+                  </div>
+                  <p class="text-muted mb-2 text-start">
+                    Lorem ipsum dolor sit amet
+                  </p>
+                  <h2 class="price text-start">
+                    $ <span class="count" data-target="1299">0</span>
+                  </h2>
+
+                  <ul class="features mt-4">
+                    <li>
+                      <i class="fa-solid fa-square-check checked"></i>Design
+                      Consultation
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-square-check checked"></i>Site Visit
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-square-check checked"></i>Custom
+                      Furniture
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-square-check checked"></i>Design
+                      Consultation
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-square-check checked"></i>Project
+                      Management
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-square-check checked"></i>3D
+                      Walkthrough
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-square-check checked"></i
+                      >Satisfaction Guarantee
+                    </li>
+                  </ul>
+
+                  <div class="btn-wrapper">
+                    <span class="icon">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                    <button class="btn btn-- mt-5">Learn More — Now</button>
+                  </div>
+                  <p class="note text-start pt-5">*Free Consultations</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 404  -->
     <section
       id="section19"
       class="section hero-section2 d-flex flex-column pt-5"
@@ -343,14 +902,14 @@
       <div class="container-fluid position-relative bg-grid px-5">
         <div class="row align-items-center">
           <!-- Left text -->
-          <div class="col-lg-6 px-5 anime">
-            <h1 class="error">404</h1>
+          <div class="col-lg-6 px-5 scroll-animate mt-5">
+            <h1 class="error fw-bold">404</h1>
             <h3 class="fw-bold">Oops, page not found</h3>
             <p class="text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
               tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
             </p>
-            <button class="btn btn2--">Go Back - Home</button>
+            <button class="btn btn--">Go Back - Home</button>
           </div>
 
           <!-- Right image with grid background -->
@@ -366,8 +925,8 @@
       <div class="container-fluid position-relative bg-grid px-5">
         <div class="row align-items-center">
           <!-- Left text -->
-          <div class="col-lg-6 px-5 anime">
-            <p class="text-success fw-semibold">
+          <div class="col-lg-6 px-5 scroll-animate mt-5">
+            <p class="text-success-color fw-semibold">
               Exploring the Expertise of Digiqu's Dynamic Team
             </p>
             <h1 class="display-3 fw-bold">Blog</h1>
@@ -386,8 +945,8 @@
       <div class="container-fluid position-relative bg-grid px-5">
         <div class="row align-items-center">
           <!-- Left text -->
-          <div class="col-lg-6 px-5 anime">
-            <p class="text-success fw-semibold">
+          <div class="col-lg-6 px-5 scroll-animate mt-5">
+            <p class="text-success-color fw-semibold">
               Exploring the Expertise of Digiqu's Dynamic Team
             </p>
             <h1 class="display-3 fw-bold">Contact</h1>
@@ -398,10 +957,43 @@
         </div>
       </div>
     </section>
+    <!-- comming soon  -->
+    <section
+      id="section28"
+      class="section hero-section2 d-flex flex-column py-5 mt-2"
+    >
+      <div class="container-fluid position-relative bg-grid px-4">
+        <div class="row align-items-center">
+          <!-- Left text -->
+          <div class="col-lg-6 px-2 scroll-animate mt-5 mt-5">
+            <div class="footer-logo col-md-3">
+              <h2>digiqu<span class="dot">.</span></h2>
+            </div>
+            <h3 class="my-4 fw-bold">Under Maintenance</h3>
+            <p class="text-secondary">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+              dolorem modi labore quidem ipsa ipsum!
+            </p>
+            <h4 class="my-4 fw-bold">Stay Touch On:</h4>
+            <div class="footer-bottom">
+              <div class="footer-socials">
+                <i class="fab fa-facebook-f me-2"></i>
+                <i class="fab fa-twitter me-2"></i>
+                <i class="fab fa-youtube me-2"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right image with grid background -->
+          <div class="col-lg-6 position-relative"></div>
+        </div>
+      </div>
+    </section>
+
     <!-- blog main  -->
     <section id="section21" class="section blog-section py-5">
       <div class="container">
-        <div class="row g-4">
+        <div class="row g-4 scroll-animate">
           <!-- Card 1 -->
           <div class="col-md-4">
             <div class="card blog-card h-100 p-3">
@@ -487,7 +1079,7 @@
     </section>
     <section id="section2" class="section">
       <div class="container-fluid mt-3">
-        <div class="logo-carousel">
+        <div class="logo-carousel scroll-animate">
           <div class="logo-track">
             <img src="./images/4841541.png" class="logo" alt="Logo 1" />
             <img src="./images/4845141.png" class="logo" alt="Logo 2" />
@@ -495,35 +1087,41 @@
             <img src="./images/5125154.png" class="logo" alt="Logo 4" />
             <img src="./images/526562.png" class="logo" alt="Logo 5" />
 
+            <!-- Duplicate logos for smooth loop -->
             <img src="./images/4841541.png" class="logo" alt="Logo 1 Clone" />
             <img src="./images/4845141.png" class="logo" alt="Logo 2 Clone" />
+            <img src="./images/4845410.png" class="logo" alt="Logo 3 Clone" />
+            <img src="./images/5125154.png" class="logo" alt="Logo 4 Clone" />
+            <img src="./images/526562.png" class="logo" alt="Logo 5 Clone" />
           </div>
         </div>
       </div>
     </section>
 
     <section id="section3" class="section d-flex flex-column p-2 bg-dark">
-      <div class="container-fluid">
+      <div class="container">
         <div class="row mt-5">
           <div
-            class="col-md-6 d-flex flex-column align-item-center justify-content-center"
+            class="col-md-6 d-flex flex-column align-items-center justify-content-center"
           >
             <img
               src="./images/creative-women-writing-and-meeting-in-planning-b-2023-08-21-21-55-18-utc-800x511.jpg"
               alt="women"
-              class="img-fluid img"
+              class="img-fluid img scroll-animate"
             />
           </div>
           <div
             class="col-md-6 text-white d-flex flex-column align-item-center justify-content-center"
           >
-            <h1 class="mb-5 fw-bold">Our Passion for Innovation</h1>
-            <p>
+            <h1 class="mb-5 fw-bold scroll-animate">
+              Our Passion for Innovation
+            </h1>
+            <p class="scroll-animate">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
               suscipit accusamus excepturi labore exercitationem tempore rerum
               cumque quos eveniet quaerat.
             </p>
-            <p>
+            <p class="scroll-animate">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius
               impedit vel nostrum atque ex in!
             </p>
@@ -531,58 +1129,59 @@
         </div>
       </div>
 
-      <div class="container-fluid">
+      <div class="container">
         <div class="row mt-3">
           <div class="col-md-6 text-white d-flext justified-content-between">
-            <h1 class="mb-5 fw-bold">Expertise that Speaks Volumes</h1>
-            <p>
+            <h1 class="mb-5 fw-bold scroll-animate">
+              Expertise that Speaks Volumes
+            </h1>
+            <p class="scroll-animate">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
               suscipit accusamus excepturi labore exercitationem tempore rerum
               cumque quos eveniet quaerat.
             </p>
-            <p>
+            <p class="scroll-animate">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius
               impedit vel nostrum atque ex in!
             </p>
-            <div class="cta-banner1 mt-5">
+            <div class="cta-banner1 mt-5 scroll-animate">
               <div class="cta-icon1 me-3">
                 <div class="circle-icon1">
                   <i class="fa-solid fa-arrow-right"></i>
                 </div>
               </div>
               <div>
-                <h5 class="mb-1 fw-semibold text-success">Get Started — Now</h5>
-                <p class="mb-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut.
+                <h5 class="mb-1 fw-semibold text-success-color">
+                  Collaborative
+                </h5>
+                <p class="mb-0 para-text text-secondary">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 </p>
               </div>
             </div>
-            <div class="cta-banner1 mt-5">
-              <div class="cta-icon1 me-5">
-                <div class="circle-icon1">
-                  <i class="fa-solid fa-arrow-right"></i>
-                </div>
-              </div>
-              <div>
-                <h5 class="mb-1 fw-semibold text-success">Get Started — Now</h5>
-                <p class="mb-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut.
-                </p>
-              </div>
-            </div>
-            <div class="cta-banner1 mt-5">
+            <div class="cta-banner1 mt-5 scroll-animate">
               <div class="cta-icon1 me-3">
                 <div class="circle-icon1">
                   <i class="fa-solid fa-arrow-right"></i>
                 </div>
               </div>
               <div>
-                <h5 class="mb-1 fw-semibold text-success">Get Started — Now</h5>
-                <p class="mb-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut.
+                <h5 class="mb-1 fw-semibold text-success-color">Creativity</h5>
+                <p class="mb-0 para-text text-secondary">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                </p>
+              </div>
+            </div>
+            <div class="cta-banner1 mt-5 scroll-animate">
+              <div class="cta-icon1 me-3">
+                <div class="circle-icon1">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+              </div>
+              <div>
+                <h5 class="mb-1 fw-semibold text-success-color">Excellence</h5>
+                <p class="mb-0 para-text text-secondary">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit,.
                 </p>
               </div>
             </div>
@@ -591,7 +1190,7 @@
             <img
               src="./images/shot-of-a-group-of-businesspeople-using-a-digital-2023-01-09-22-20-18-utc-800x532.jpg"
               alt="people"
-              class="img-fluid img1"
+              class="img-fluid img1 scroll-animate"
             />
           </div>
         </div>
@@ -599,13 +1198,15 @@
     </section>
     <section id="section4" class="section">
       <div class="container-fluid bg- py-5">
-        <h1 class="mb-5 pt-4 mx-5 fw-bold">Bringing Ideas to Life</h1>
+        <h1 class="mb-5 pt-4 mx-5 fw-bold scroll-animate">
+          Bringing Ideas to Life
+        </h1>
         <div class="px-5 pb-5">
           <div
             class="row g-4 d-flex align-items-between justify-content-center"
           >
             <!-- Step 1 - Active -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 scroll-animate">
               <div class="process-card active-card p-4 rounded-4 h-100">
                 <div class="step-number">01</div>
                 <h3 class="fw-bold mt-3">Discovery and Strategy</h3>
@@ -617,7 +1218,7 @@
             </div>
 
             <!-- Step 2 -->
-            <div class="col-md-4">
+            <div class="col-md-4 scroll-animate">
               <div class="process-card p-4 rounded-4 h-100">
                 <div class="step-number">02</div>
                 <h3 class="fw-bold mt-3">Design and Development</h3>
@@ -629,7 +1230,7 @@
             </div>
 
             <!-- Step 3 -->
-            <div class="col-md-4">
+            <div class="col-md-4 scroll-animate">
               <div class="process-card p-4 rounded-4 h-100">
                 <div class="step-number">03</div>
                 <h3 class="fw-bold mt-3">Launch and Optimization</h3>
@@ -645,14 +1246,20 @@
     </section>
     <section id="section5" class="section">
       <div class="container-fluid">
-        <h1 class="my-5 fw-bold">Our Comprehensive Services Suite</h1>
+        <h1 class="my-5 fw-bold scroll-animate">
+          Our Comprehensive Services Suite
+        </h1>
 
         <div class="row mx-2">
           <div class="col-md-4">
-            <img src="./images/img4.png" alt="img" class="img-fluid imgs" />
+            <img
+              src="./images/img4.png"
+              alt="img"
+              class="img-fluid imgs scroll-animate"
+            />
           </div>
           <div
-            class="col-md-5 px-3 pt-5 flex-column justify-content-start align-item-center"
+            class="col-md-5 px-3 pt-5 flex-column justify-content-start align-item-center scroll-animate"
           >
             <h3 class="">Web Design and Development</h3>
             <p class="text-secondary">
@@ -661,16 +1268,25 @@
               accusamus!
             </p>
           </div>
-          <div class="col-md-3">
-            <button class="btn btn-- mt-5">Learn More - Now</button>
+          <div class="col-md-3 scroll-animate">
+            <div class="btn-wrapper">
+              <span class="icon">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+              <button class="btn btn-- mt-5">Learn More — Now</button>
+            </div>
           </div>
         </div>
         <div class="row mx-2">
           <div class="col-md-4">
-            <img src="./images/img5.png" alt="img" class="img-fluid imgs" />
+            <img
+              src="./images/img5.png"
+              alt="img"
+              class="img-fluid imgs scroll-animate"
+            />
           </div>
           <div
-            class="col-md-5 px-3 pt-5 flex-column justify-content-start align-item-center"
+            class="col-md-5 px-3 pt-5 flex-column justify-content-start align-item-center scroll-animate"
           >
             <h3>Digital Marketing Strategy</h3>
             <p class="text-secondary">
@@ -679,16 +1295,25 @@
               accusamus!
             </p>
           </div>
-          <div class="col-md-3">
-            <button class="btn btn-- mt-5">Learn More - Now</button>
+          <div class="col-md-3 scroll-animate">
+            <div class="btn-wrapper">
+              <span class="icon">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+              <button class="btn btn-- mt-5">Learn More — Now</button>
+            </div>
           </div>
         </div>
         <div class="row mx-2">
           <div class="col-md-4">
-            <img src="./images/img6.png" alt="img" class="img-fluid imgs" />
+            <img
+              src="./images/img6.png"
+              alt="img"
+              class="img-fluid imgs scroll-animate"
+            />
           </div>
           <div
-            class="col-md-5 px-3 pt-5 flex-column justify-content-start align-item-center"
+            class="col-md-5 px-3 pt-5 flex-column justify-content-start align-item-center scroll-animate"
           >
             <h3>E-Commerce Solutions</h3>
             <p class="text-secondary">
@@ -697,16 +1322,25 @@
               accusamus!
             </p>
           </div>
-          <div class="col-md-3">
-            <button class="btn btn-- mt-5">Learn More - Now</button>
+          <div class="col-md-3 scroll-animate">
+            <div class="btn-wrapper">
+              <span class="icon">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+              <button class="btn btn-- mt-5">Learn More - Now</button>
+            </div>
           </div>
         </div>
         <div class="row mx-2">
           <div class="col-md-4">
-            <img src="./images/img3.png" alt="img" class="img-fluid imgs" />
+            <img
+              src="./images/img3.png"
+              alt="img"
+              class="img-fluid imgs scroll-animate"
+            />
           </div>
           <div
-            class="col-md-5 px-3 d-flex pt-5 flex-column justify-content-start align-item-center"
+            class="col-md-5 px-3 d-flex pt-5 flex-column justify-content-start align-item-center scroll-animate"
           >
             <h3>Brand Identity and Design</h3>
             <p class="text-secondary">
@@ -715,21 +1349,26 @@
               accusamus!
             </p>
           </div>
-          <div class="col-md-3">
-            <button class="btn btn-- mt-5">Learn More - Now</button>
+          <div class="col-md-3 scroll-animate">
+            <div class="btn-wrapper">
+              <span class="icon">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+              <button class="btn btn-- mt-5">Learn More - Now</button>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="section6" class="section">
-      <div class="container-fluid bg-dark pt-5 px-3">
-        <div class="row">
+    <section id="section6" class="section bg-black pb-0">
+      <div class="container pt-5 px-3 pb-0">
+        <div class="row scroll-animate mb-0">
           <div class="col-md-8">
             <!-- Video Thumbnail with Play Button -->
             <div class="video-thumbnail-container position-relative">
               <img
                 src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/meeting-planning-and-strategy-of-business-woman-2022-12-08-03-48-13-utc-800x407.jpg"
-                class="img-fluid rounded-4"
+                class="img-fluid rounded-4 img-img me-5"
                 style="cursor: pointer"
                 id="videoTrigger"
                 alt="Video thumbnail"
@@ -758,7 +1397,7 @@
             </div>
           </div>
 
-          <div class="col-md-4 text-white">
+          <div class="col-md-4 text-white ps-4">
             <h1 class="fw-bold mb-3">A Glance at Our Milestones</h1>
             <p class="mb-3">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
@@ -766,36 +1405,43 @@
               sit!
             </p>
             <div class="cta-banner1 mt-5">
-              <div class="cta-icon1 me-3">
+              <div class="cta-icon1 me-3 my-4">
                 <div class="circle-icon1">
                   <i class="fa-solid fa-gift"></i>
                 </div>
               </div>
-              <div>
-                <h5 class="mb-1 fw-semibold text-success">Get Started — Now</h5>
-                <p class="mb-0">Project Done</p>
+              <div class="my-4">
+                <h2 class="mb-0 fw-semibold text-success-color1">
+                  <span class="count" data-target="72">0</span> K <sup>+</sup>
+                </h2>
+
+                <p class="mb-0 text-black">Project Done</p>
               </div>
             </div>
-            <div class="cta-banner1 mt-5">
-              <div class="cta-icon1 me-3">
+            <div class="cta-banner1 mt-4">
+              <div class="cta-icon1 me-3 my-4">
                 <div class="circle-icon1">
                   <i class="fa-solid fa-user"></i>
                 </div>
               </div>
-              <div>
-                <h5 class="mb-1 fw-semibold text-success">Get Started — Now</h5>
-                <p class="mb-0">Happy Clients</p>
+              <div class="my-4">
+                <h2 class="mb-0 fw-semibold text-success-color1">
+                  <span class="count" data-target="48">0</span> K <sup>+</sup>
+                </h2>
+                <p class="mb-0 text-black">Happy Clients</p>
               </div>
             </div>
-            <div class="cta-banner1 mt-5">
-              <div class="cta-icon1 me-3">
+            <div class="cta-banner1 mt-4">
+              <div class="cta-icon1 me-3 my-4">
                 <div class="circle-icon1">
                   <i class="fa-solid fa-hourglass-end"></i>
                 </div>
               </div>
-              <div>
-                <h5 class="mb-1 fw-semibold text-success">Get Started — Now</h5>
-                <p class="mb-0">Years Of Experience</p>
+              <div class="my-4">
+                <h2 class="mb-0 fw-semibold text-success-color1">
+                  <span class="count" data-target="16">0</span> <sup>+</sup>
+                </h2>
+                <p class="mb-0 text-black">Years Of Experience</p>
               </div>
             </div>
           </div>
@@ -803,11 +1449,13 @@
       </div>
     </section>
     <section id="section7" class="section portfolio-section pb-5 bg-">
-      <div class="container-fluid bg-light py-5">
-        <h1 class="mb-5 fw-bold mx-5">Our Diverse Portfolio of Projects</h1>
+      <div class="container bg-light py-5">
+        <h1 class="mb-5 fw-bold mx-5 scroll-animate">
+          Our Diverse Portfolio of Projects
+        </h1>
 
         <!-- First Row -->
-        <div class="row align-items-center mb-5">
+        <div class="row align-items-center mb-5 scroll-animate">
           <div class="col-md-8">
             <img
               src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/the-meeting-room-for-startup-companies-the-market-2023-04-18-16-40-42-utc-800x533.jpg"
@@ -815,32 +1463,46 @@
               class="img-fluid rounded-4 shadow-lg img3"
             />
           </div>
-          <div class="col-md-4">
-            <div class="container bg-white p-4 rounded-4 portfolio shadow-sm">
+          <div class="col-md-4 mt-0">
+            <div
+              class="container bg-white p-4 rounded-4 portfolio shadow-sm pb-5"
+            >
               <h2 class="mb-4">Interactive Brand Website for Corporation</h2>
-              <p class="text-secondary mb-4">
+              <p class="text-secondary mb-0">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam
                 ipsa fuga aut illo suscipit esse odio veniam labore repellat
                 nesciunt.
               </p>
-              <button class="btn btn--">Learn More - Now</button>
+              <div class="btn-wrapper">
+                <span class="icon">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </span>
+                <button class="btn btn-- mt-5">Learn More — Now</button>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Second Row -->
-        <div class="row align-items-center">
+        <div class="row align-items-center scroll-animate">
           <div class="col-md-4">
-            <div class="container bg-white p-4 portfolio rounded-4 shadow-sm">
+            <div
+              class="container bg-white p-4 portfolio rounded-4 shadow-sm mb-5"
+            >
               <h2 class="mb-3">
                 Strategic Digital Marketing Campaign for Startup
               </h2>
-              <p class="text-secondary mb-4">
+              <p class="text-secondary mb-0">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam
                 ipsa fuga aut illo suscipit esse odio veniam labore repellat
                 nesciunt.
               </p>
-              <button class="btn btn--">Learn More</button>
+              <div class="btn-wrapper">
+                <span class="icon">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </span>
+                <button class="btn btn-- mt-5">Learn More — Now</button>
+              </div>
             </div>
           </div>
           <div class="col-md-8">
@@ -853,24 +1515,36 @@
         </div>
       </div>
     </section>
+
+    <!-- faq main  -->
     <section id="section8" class="section faq-section pt-5">
       <div class="container">
-        <h1 class="text-start mb-5 mx-4 fw-bold">Explore Our FAQ Section</h1>
+        <h1 class="text-start mb-5 mx-4 fw-bold scroll-animate">
+          Explore Our FAQ Section
+        </h1>
 
-        <div class="accordion" id="faqAccordion">
+        <div
+          class="accordion scroll-animate"
+          id="faqAccordion"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <!-- Accordion Item 1 -->
-          <div class="accordion-item">
+          <div class="accordion-item rounded-5">
             <h2 class="accordion-header" id="headingOne">
               <button
-                class="accordion-button"
+                class="accordion-button d-flex justify-content-between align-items-center"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#collapseOne"
                 aria-expanded="true"
                 aria-controls="collapseOne"
               >
-                <span class="question-number fw-bold">1.</span>
-                What services do we offer?
+                <div class="d-flex align-items-center">
+                  <span class="question-number fw-bold me-2">1.</span>
+                  <span class="question-text">What services do we offer?</span>
+                </div>
+                <i class="fa-solid fa-angle-down arrow-icon"></i>
               </button>
             </h2>
             <div
@@ -903,18 +1577,25 @@
           </div>
 
           <!-- Accordion Item 2 -->
-          <div class="accordion-item">
+          <div
+            class="accordion-item rounded-5"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <h2 class="accordion-header" id="headingTwo">
               <button
-                class="accordion-button collapsed"
+                class="accordion-button collapsed d-flex justify-content-between align-items-center"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#collapseTwo"
                 aria-expanded="false"
                 aria-controls="collapseTwo"
               >
-                <span class="question-number fw-bold">2.</span>
-                How do we collaborate?
+                <div class="d-flex align-items-center">
+                  <span class="question-number fw-bold me-2">2.</span>
+                  <span class="question-text">How do we collaborate?</span>
+                </div>
+                <i class="fa-solid fa-angle-down arrow-icon"></i>
               </button>
             </h2>
             <div
@@ -937,18 +1618,27 @@
           </div>
 
           <!-- Accordion Item 3 -->
-          <div class="accordion-item">
+          <div
+            class="accordion-item rounded-5"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <h2 class="accordion-header" id="headingThree">
               <button
-                class="accordion-button collapsed"
+                class="accordion-button collapsed d-flex justify-content-between align-items-center"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#collapseThree"
                 aria-expanded="false"
                 aria-controls="collapseThree"
               >
-                <span class="question-number fw-bold">3.</span>
-                Can we handle both small and large scale projects?
+                <div class="d-flex align-items-center">
+                  <span class="question-number fw-bold me-2">3.</span>
+                  <span class="question-text"
+                    >Can we handle both small and large scale projects?</span
+                  >
+                </div>
+                <i class="fa-solid fa-angle-down arrow-icon"></i>
               </button>
             </h2>
             <div
@@ -969,18 +1659,27 @@
           </div>
 
           <!-- Accordion Item 4 -->
-          <div class="accordion-item">
+          <div
+            class="accordion-item rounded-5"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <h2 class="accordion-header" id="headingFour">
               <button
-                class="accordion-button collapsed"
+                class="accordion-button collapsed d-flex justify-content-between align-items-center"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#collapseFour"
                 aria-expanded="false"
                 aria-controls="collapseFour"
               >
-                <span class="question-number fw-bold">4.</span>
-                What sets us apart in the digital landscape?
+                <div class="d-flex align-items-center">
+                  <span class="question-number fw-bold me-2">4.</span>
+                  <span class="question-text"
+                    >What sets us apart in the digital landscape?</span
+                  >
+                </div>
+                <i class="fa-solid fa-angle-down arrow-icon"></i>
               </button>
             </h2>
             <div
@@ -1001,18 +1700,27 @@
           </div>
 
           <!-- Accordion Item 5 -->
-          <div class="accordion-item">
+          <div
+            class="accordion-item rounded-5"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <h2 class="accordion-header" id="headingFive">
               <button
-                class="accordion-button collapsed"
+                class="accordion-button collapsed d-flex justify-content-between align-items-center"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#collapseFive"
                 aria-expanded="false"
                 aria-controls="collapseFive"
               >
-                <span class="question-number fw-bold">5.</span>
-                How do we ensure the security of digital solutions?
+                <div class="d-flex align-items-center">
+                  <span class="question-number fw-bold me-2">5.</span>
+                  <span class="question-text"
+                    >How do we ensure the security of digital solutions?</span
+                  >
+                </div>
+                <i class="fa-solid fa-angle-down arrow-icon"></i>
               </button>
             </h2>
             <div
@@ -1033,22 +1741,281 @@
         </div>
       </div>
     </section>
+    <section id="section26" class="section bg-light">
+      <div class="container-fluid my-5 pt-5">
+        <div class="row">
+          <div class="col-12 col-md-4 col-sm-12">
+            <div
+              class="question-box d-flex flex-column justify-content-between"
+            >
+              <div class="d-flex flex-column mb-4 mb-md-0">
+                <div class="avatar-group me-3 mb-2">
+                  <img
+                    src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/welcome-to-the-digital-age-2023-01-09-19-31-06-utc.jpg"
+                    alt="Person 1"
+                  />
+                  <img
+                    src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/portrait-of-a-young-businesswoman-using-a-digital-2022-09-27-15-33-38-utc.jpg"
+                    alt="Person 2"
+                  />
+                  <img
+                    src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/cropped-shot-of-a-businesswoman-holding-a-digital-2022-12-10-00-23-21-utc.jpg"
+                    alt="Person 3"
+                  />
+                </div>
+                <div>
+                  <h3 class="mb-2 fw-bold">Still Have Questions</h3>
+                  <p class="text-muted">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                </div>
+                <a href="#" class="btn btn-contact">Get In Touch — Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-8 col-sm-12">
+            <div class="accordion" id="faqAccordion">
+              <!-- Accordion Item 1 -->
+              <!-- Accordion Item 1 -->
+              <div class="accordion-item rounded-5">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button d-flex justify-content-between align-items-center"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    <div class="d-flex align-items-center">
+                      <span class="question-number fw-bold me-2">1.</span>
+                      <span class="question-text"
+                        >What services do we offer?</span
+                      >
+                    </div>
+                    <i class="fa-solid fa-angle-down arrow-icon"></i>
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed do eiusmod tempor incididunt. Lorem ipsum dolor sit
+                      amet consectetur adipisicing elit. Eius earum ad sequi
+                      exercitationem est nulla, quam mollitia eos temporibus
+                      fuga.
+                    </p>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed do eiusmod tempor incididunt. Lorem ipsum dolor sit
+                      amet consectetur adipisicing elit. Eius earum ad sequi
+                      exercitationem est nulla, quam mollitia eos temporibus
+                      fuga.
+                    </p>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed do eiusmod tempor incididunt. Lorem ipsum dolor sit
+                      amet consectetur adipisicing elit. Eius earum ad sequi
+                      exercitationem est nulla, quam mollitia eos temporibus
+                      fuga.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Accordion Item 2 -->
+              <div
+                class="accordion-item rounded-5"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    <div class="d-flex align-items-center">
+                      <span class="question-number fw-bold me-2">2.</span>
+                      <span class="question-text">How do we collaborate?</span>
+                    </div>
+                    <i class="fa-solid fa-angle-down arrow-icon"></i>
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed do eiusmod tempor incididunt. Lorem ipsum dolor sit
+                      amet consectetur adipisicing elit. Eius earum ad sequi
+                      exercitationem est nulla, quam mollitia eos temporibus
+                      fuga. Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Earum, placeat?
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Accordion Item 3 -->
+              <div
+                class="accordion-item rounded-5"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    <div class="d-flex align-items-center">
+                      <span class="question-number fw-bold me-2">3.</span>
+                      <span class="question-text"
+                        >Can we handle both small and large scale
+                        projects?</span
+                      >
+                    </div>
+                    <i class="fa-solid fa-angle-down arrow-icon"></i>
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed do eiusmod tempor incididunt. Lorem ipsum dolor sit
+                      amet consectetur adipisicing elit. Eius earum ad sequi
+                      exercitationem est nulla, quam mollitia eos temporibus
+                      fuga.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Accordion Item 4 -->
+              <div
+                class="accordion-item rounded-5"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <h2 class="accordion-header" id="headingFour">
+                  <button
+                    class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseFour"
+                  >
+                    <div class="d-flex align-items-center">
+                      <span class="question-number fw-bold me-2">4.</span>
+                      <span class="question-text"
+                        >What sets us apart in the digital landscape?</span
+                      >
+                    </div>
+                    <i class="fa-solid fa-angle-down arrow-icon"></i>
+                  </button>
+                </h2>
+                <div
+                  id="collapseFour"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingFour"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed do eiusmod tempor incididunt. Lorem ipsum dolor sit
+                      adipisicing elit. Eius earum ad sequi exercitationem est
+                      nulla, quam mollitia eos temporibus fuga.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Accordion Item 5 -->
+              <div
+                class="accordion-item rounded-5"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <h2 class="accordion-header" id="headingFive">
+                  <button
+                    class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive"
+                    aria-expanded="false"
+                    aria-controls="collapseFive"
+                  >
+                    <div class="d-flex align-items-center">
+                      <span class="question-number fw-bold me-2">5.</span>
+                      <span class="question-text"
+                        >How do we ensure the security of digital
+                        solutions?</span
+                      >
+                    </div>
+                    <i class="fa-solid fa-angle-down arrow-icon"></i>
+                  </button>
+                </h2>
+                <div
+                  id="collapseFive"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingFive"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      Lorem eiusmod tempor incididunt. Lorem ipsum dolor sit
+                      amet consectetur adipisicing elit. Eius earum ad sequi
+                      exercitationem est nulla, quam mollitia eos temporibus
+                      fuga.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="section9" class="section">
       <section class="subscribe">
-        <div class="container-fluid">
+        <div class="container">
           <div class="row align-items-center">
             <!-- Left Content -->
             <div class="col-md-6 text-white">
-              <h1 class="fw-bold">
+              <h1 class="fw-bold scroll-animate">
                 Subscribe for Exclusive Updates and Insights
               </h1>
-              <p class="lead">
+              <p class="lead scroll-animate">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni,
                 velit? Lorem, ipsum dolor.
               </p>
 
               <div
-                class="cta-banner2 mt-4 d-flex justify-content-between align-items-center gap-3"
+                class="cta-banner2 mt-4 d-flex justify-content-between align-items-center gap-3 scroll-animate"
               >
                 <input
                   type="email"
@@ -1064,7 +2031,7 @@
               <img
                 src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/cheerful-caucasian-man-in-t-shirt-looking-happy-p-2023-03-10-22-31-27-utc-removebg-preview-1-800x874.png"
                 alt="Subscribe"
-                class="img-fluid pb-0"
+                class="img-fluid pb-0 scroll-animate"
                 style="max-height: 450px"
               />
             </div>
@@ -1108,11 +2075,15 @@
         </div>
       </div>
     </section>
+
+    <!-- portfolio  -->
     <section id="section10" class="section testimonial-section">
       <div class="d-flex justify-content-between">
-        <h1 class="section-title fw-bold mx-4">Hear It From Our Clients</h1>
+        <h1 class="section-title fw-bold mx-4 scroll-animate">
+          Hear It From Our Clients
+        </h1>
 
-        <div class="arrow-wrapper">
+        <div class="arrow-wrapper scroll-animate">
           <button class="circle-arrow" id="prevBtn">
             <i class="fas fa-arrow-left"></i>
           </button>
@@ -1122,71 +2093,126 @@
         </div>
       </div>
 
-      <div class="testimonial-container container-fluid">
-        <div class="testimonial-slider" id="slider">
+      <div class="testimonial-container container-fluid scroll-animate">
+        <div class="testimonial-slider pb-5" id="slider">
           <div class="testimonial-card">
-            <img
-              src="https://randomuser.me/api/portraits/women/44.jpg"
-              alt="Sarah Brown"
-            />
-            <h3>Sarah Brown</h3>
-            <p class="position">CTO, Tech Innovators</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="d-flex">
+              <img
+                src="https://randomuser.me/api/portraits/women/44.jpg"
+                alt="Sarah Brown"
+                class="ms-1"
+              />
+              <div class="mx-4">
+                <h3 class="text-start">Sarah Brown</h3>
+                <p class="position">CTO, Tech Innovators</p>
+              </div>
+            </div>
+            <p class="text-start text-secondary mt-3">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+              deleniti?
+            </p>
           </div>
           <div class="testimonial-card">
-            <img
-              src="https://randomuser.me/api/portraits/men/45.jpg"
-              alt="John Doe"
-            />
-            <h3>John Doe</h3>
-            <p class="position">CEO, XYZ Corporation</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="d-flex">
+              <img
+                src="https://randomuser.me/api/portraits/women/44.jpg"
+                alt="Sarah Brown"
+                class="ms-1"
+              />
+              <div class="mx-4">
+                <h3 class="text-start">Sarah Brown</h3>
+                <p class="position">CTO, Tech Innovators</p>
+              </div>
+            </div>
+            <p class="text-start text-secondary mt-3">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+              deleniti?
+            </p>
           </div>
           <div class="testimonial-card">
-            <img
-              src="https://randomuser.me/api/portraits/men/45.jpg"
-              alt="John Doe"
-            />
-            <h3>John Doe</h3>
-            <p class="position">CEO, XYZ Corporation</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="d-flex">
+              <img
+                src="https://randomuser.me/api/portraits/women/44.jpg"
+                alt="Sarah Brown"
+                class="ms-1"
+              />
+              <div class="mx-4">
+                <h3 class="text-start">Sarah Brown</h3>
+                <p class="position">CTO, Tech Innovators</p>
+              </div>
+            </div>
+            <p class="text-start text-secondary mt-3">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+              deleniti?
+            </p>
           </div>
           <div class="testimonial-card">
-            <img
-              src="https://randomuser.me/api/portraits/men/45.jpg"
-              alt="John Doe"
-            />
-            <h3>John Doe</h3>
-            <p class="position">CEO, XYZ Corporation</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="d-flex">
+              <img
+                src="https://randomuser.me/api/portraits/women/44.jpg"
+                alt="Sarah Brown"
+                class="ms-1"
+              />
+              <div class="mx-4">
+                <h3 class="text-start">Sarah Brown</h3>
+                <p class="position">CTO, Tech Innovators</p>
+              </div>
+            </div>
+            <p class="text-start text-secondary mt-3">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+              deleniti?
+            </p>
           </div>
           <div class="testimonial-card">
-            <img
-              src="https://randomuser.me/api/portraits/men/45.jpg"
-              alt="John Doe"
-            />
-            <h3>John Doe</h3>
-            <p class="position">CEO, XYZ Corporation</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="d-flex">
+              <img
+                src="https://randomuser.me/api/portraits/women/44.jpg"
+                alt="Sarah Brown"
+                class="ms-1"
+              />
+              <div class="mx-4">
+                <h3 class="text-start">Sarah Brown</h3>
+                <p class="position">CTO, Tech Innovators</p>
+              </div>
+            </div>
+            <p class="text-start text-secondary mt-3">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+              deleniti?
+            </p>
           </div>
           <div class="testimonial-card">
-            <img
-              src="https://randomuser.me/api/portraits/men/45.jpg"
-              alt="John Doe"
-            />
-            <h3>John Doe</h3>
-            <p class="position">CEO, XYZ Corporation</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="d-flex">
+              <img
+                src="https://randomuser.me/api/portraits/women/44.jpg"
+                alt="Sarah Brown"
+                class="ms-1"
+              />
+              <div class="mx-4">
+                <h3 class="text-start">Sarah Brown</h3>
+                <p class="position">CTO, Tech Innovators</p>
+              </div>
+            </div>
+            <p class="text-start text-secondary mt-3">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+              deleniti?
+            </p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- blog  -->
     <section id="section11" class="section news mb-5">
       <div class="container-fluid">
         <div class="d-flex justify-content-between m-5">
-          <h1 class="mt-5 fw-bold">Latest News</h1>
-          <button class="btn btn2-- mt-5">All-Blog Posts</button>
+          <h1 class="mt-5 fw-bold scroll-animate">Latest News</h1>
+          <button class="btn btn2-- mt-5 scroll-animate">All-Blog Posts</button>
         </div>
       </div>
       <!-- blog-section -->
@@ -1195,7 +2221,7 @@
           <div class="row g-4">
             <!-- Card 1 -->
             <div class="col-md-4">
-              <div class="card blog-card h-100 p-3">
+              <div class="card blog-card h-100 p-3 scroll-animate">
                 <img
                   src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/online-selling-e-commerce-shipping-concept-2022-04-21-14-06-24-utc.jpg"
                   class="card-img-top rounded"
@@ -1205,7 +2231,7 @@
                   <h5 class="fw-bold">
                     E-Commerce Revolution: Strategies for Success
                   </h5>
-                  <p class="text-secondary">
+                  <p class="text-secondary para-text">
                     Empowering Your Vision: Unleashing Digiqu's Comprehensive
                     Digital Services E-Commerce Revolution: Strategies for
                     Success October 25, 2023 7:29 pm Lorem ipsum...
@@ -1215,7 +2241,7 @@
             </div>
             <!-- Card 2 -->
             <div class="col-md-4">
-              <div class="card blog-card h-100 p-3">
+              <div class="card blog-card h-100 p-3 scroll-animate">
                 <img
                   src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/female-influencer-filming-video-review-of-new-tabl-2022-12-16-07-36-33-utc.jpg"
                   class="card-img-top rounded"
@@ -1225,7 +2251,7 @@
                   <h5 class="fw-bold">
                     Crafting Compelling Content: Beyond the Pixels
                   </h5>
-                  <p class="text-secondary">
+                  <p class="text-secondary para-text">
                     Empowering Your Vision: Unleashing Digiqu's Comprehensive
                     Digital Services Crafting Compelling Content: Beyond the
                     Pixels October 25, 2023 7:26 pm Lorem...
@@ -1235,7 +2261,7 @@
             </div>
             <!-- Card 3 -->
             <div class="col-md-4">
-              <div class="card blog-card h-100 p-3">
+              <div class="card blog-card h-100 p-3 scroll-animate">
                 <img
                   src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/happy-businesswoman-with-a-digital-tablet-2022-12-15-22-58-53-utc-768x512.jpg"
                   class="card-img-top rounded"
@@ -1245,7 +2271,7 @@
                   <h5 class="fw-bold">
                     SEO Success: Navigating the Digital Landscape
                   </h5>
-                  <p class="text-secondary">
+                  <p class="text-secondary para-text">
                     Empowering Your Vision: Unleashing Digiqu's Comprehensive
                     Digital Services SEO Success: Navigating the Digital
                     Landscape October 25, 2023 7:23 pm Lorem...
@@ -1264,7 +2290,7 @@
       <div class="container-fluid bg-light py-5">
         <div class="row px-5">
           <!-- LEFT COLUMN -->
-          <div class="col-12 col-md-6 d-flex flex-column">
+          <div class="col-12 col-md-6 d-flex flex-column scroll-animate">
             <h1 class="fw-bold my-3">Get In Touch</h1>
             <p class="text-secondary pb-3">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
@@ -1273,45 +2299,51 @@
               sapiente odio dicta.
             </p>
 
-            <div class="cta-banner2 mt-4 py-2">
+            <div class="cta-banner2 mt-4 py-2 scroll-animate">
               <div class="cta-icon2 me-3">
                 <div class="circle-icon2">
                   <i class="fa-solid fa-square-envelope"></i>
                 </div>
               </div>
               <div>
-                <h5 class="mb-1 fw-semibold text-success">Send Us a Mail</h5>
+                <h5 class="mb-1 fw-semibold text-success-color">
+                  Send Us a Mail
+                </h5>
                 <p class="mb-0">Info@digiqu.com</p>
               </div>
             </div>
 
-            <div class="cta-banner2 mt-4">
+            <div class="cta-banner2 mt-4 scroll-animate">
               <div class="cta-icon2 me-3">
                 <div class="circle-icon2">
                   <i class="fa-solid fa-phone-volume"></i>
                 </div>
               </div>
               <div>
-                <h5 class="mb-1 fw-semibold text-success">Talk With Us</h5>
+                <h5 class="mb-1 fw-semibold text-success-color">
+                  Talk With Us
+                </h5>
                 <p class="mb-0">(123) 456 - 789 - 10</p>
               </div>
             </div>
 
-            <div class="cta-banner2 mt-4">
+            <div class="cta-banner2 mt-4 scroll-animate">
               <div class="cta-icon2 me-3">
                 <div class="circle-icon2">
                   <i class="fa-solid fa-location-crosshairs"></i>
                 </div>
               </div>
               <div>
-                <h5 class="mb-1 fw-semibold text-success">Find Us On Map</h5>
+                <h5 class="mb-1 fw-semibold text-success-color">
+                  Find Us On Map
+                </h5>
                 <p class="mb-0">4096 Modesto, CA 95350, USA</p>
               </div>
             </div>
           </div>
 
           <!-- RIGHT COLUMN -->
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6 scroll-animate">
             <div class="form-wrapper">
               <form class="contact-form">
                 <div class="form-row">
@@ -1351,16 +2383,21 @@
     <!-- footer -->
 
     <footer id="section12" class="section footer bg-light">
-      <div class="container-fluid line mb-5">
+      <div class="container line mb-5">
         <div class="d-flex justify-content-between m-5">
           <h1 class="mt-3 fw-bold w-50">
             Contact Us for a Free Consultation Today.
           </h1>
-          <button class="btn btn2-- mt-3">Contact US - Now</button>
+          <div class="btn-wrapper">
+            <span class="icon">
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+            <button class="btn btn-- mt-5">Contact US — Now</button>
+          </div>
         </div>
       </div>
 
-      <div class="footer-container row">
+      <div class="footer-container container row">
         <div class="footer-logo col-md-3">
           <h2>digiqu<span class="dot">.</span></h2>
           <p class="text-secondary mt-3">
@@ -1414,18 +2451,64 @@
         </div>
       </div>
 
-      <div class="footer-bottom d-flex justify-content-between mx-4 mt-5 pb-4">
-        <div class="footer-socials">
+      <div
+        class="footer-bottom container d-flex justify-content-between mx-5 mt-5 pb-4"
+      >
+        <div class="footer-socials scroll-animate">
           <i class="fab fa-facebook-f me-2"></i>
           <i class="fab fa-twitter me-2"></i>
           <i class="fab fa-youtube me-2"></i>
         </div>
-        <p class="text-secondary">
+        <p class="text-secondary scroll-animate para-text">
           Copyright © 2025 DigiQU | Powered by DigiQU
         </p>
       </div>
     </footer>
 
     <script src="./js/index.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const counters = document.querySelectorAll(".count");
+
+        const startCounting = (counter) => {
+          const target = +counter.getAttribute("data-target");
+          const duration = 2000;
+          const steps = target;
+          const intervalTime = duration / steps;
+          let current = 0;
+
+          const updateCounter = () => {
+            if (current < target) {
+              current++;
+              counter.textContent = current;
+              setTimeout(updateCounter, intervalTime);
+            } else {
+              counter.textContent = target;
+            }
+          };
+
+          updateCounter();
+        };
+
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const counter = entry.target;
+                startCounting(counter);
+                observer.unobserve(counter); // Run only once
+              }
+            });
+          },
+          {
+            threshold: 0.6, // Trigger when 60% visible
+          }
+        );
+
+        counters.forEach((counter) => {
+          observer.observe(counter);
+        });
+      });
+    </script>
   </body>
 </html>

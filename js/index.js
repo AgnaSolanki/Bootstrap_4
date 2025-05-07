@@ -4,7 +4,7 @@ const slider = document.getElementById("slider");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 
-const cardWidth = slider.querySelector(".testimonial-card").offsetWidth + 20;
+const cardWidth = slider.querySelector(".testimonial-card").offsetWidth + 300;
 
 nextBtn.addEventListener("click", () => {
   slider.scrollBy({ left: cardWidth, behavior: "smooth" });
@@ -68,6 +68,26 @@ videoBtn.addEventListener("click", openModal);
 closeVideoModal.addEventListener("click", closeModal);
 closeBtn.addEventListener("click", closeModal);
 
+document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll(".scroll-animate");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target); // Animate once
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+    }
+  );
+
+  elements.forEach((el) => observer.observe(el));
+});
+
 //show section
 
 function showSections(page) {
@@ -76,6 +96,12 @@ function showSections(page) {
     section.classList.remove("show");
   });
 
+  const navbar = document.getElementById("mainNav");
+  if (page === "comming") {
+    navbar.classList.add("navbar-hidden");
+  } else {
+    navbar.classList.remove("navbar-hidden");
+  }
   // Control what sections to show
   const pages = {
     home: [
@@ -103,11 +129,11 @@ function showSections(page) {
     services: ["section14", "section4", "section5", "section9", "section12"],
 
     portfolio: ["section10", "section24", "section15", "section12"],
-    faq: ["section16", "section6", "section12"],
-    team: ["section17", "section7", "section12"],
-    price: ["section18", "section8", "section12"],
+    faq: ["section16", "section26", "section12"],
+    team: ["section17", "section25", "section9", "section12"],
+    price: ["section18", "section27", "section12"],
     404: ["section19", "section12"],
-    comming: ["section10"],
+    comming: ["section28"],
     blog: ["section20", "section21", "section9", "section12"],
     contact: ["section23", "contactMap", "section22", "section12"],
   };
@@ -121,3 +147,28 @@ function showSections(page) {
 }
 // Show all by default on page load
 window.onload = () => showSections("home");
+
+document.addEventListener("DOMContentLoaded", function () {
+  const ctaBanner = document.querySelector(".cta-banner");
+
+  function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.top < window.innerHeight && rect.bottom > 0;
+  }
+
+  function checkVisibility() {
+    if (isInViewport(ctaBanner)) {
+      ctaBanner.classList.add("animate");
+      window.removeEventListener("scroll", checkVisibility); // run only once
+    }
+  }
+
+  window.addEventListener("scroll", checkVisibility);
+  checkVisibility(); // in case it's already visible
+});
+document
+  .querySelector(".navbar-toggler")
+  .addEventListener("click", function () {
+    const navbarNav = document.querySelector(".navbar-nav");
+    navbarNav.classList.remove("animate-all");
+  });
