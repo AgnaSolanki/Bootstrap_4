@@ -15,10 +15,16 @@
       integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
       crossorigin="anonymous"
     ></script>
+
     <link rel="stylesheet" href="./css/index.css" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://public-assets.envato-static.com/assets/icons/favicons/apple-touch-icon-precomposed-c581101b4f39d1ba1c4a5e45edb6b3418847c5c387b376930c6a9922071c8148.png"
+      type="image/x-icon"
     />
   </head>
   <body>
@@ -27,16 +33,22 @@
         class="navbar navbar-dark bg-dark d-flex justify-content-beetween fixed-top py-0"
       >
         <a class="navbar-brand px-3" href="#">
-          <img src="./images/image.png" width="120" height="18" alt="" />
+          <img
+            src="./images/image.png"
+            width="100"
+            height="17"
+            alt=""
+            class="logo-img"
+          />
         </a>
-        <button class="btn btn-sm btn-btn my-1 my-sm-0 px-3 me-3" type="submit">
+        <button class="btn btn-sm btn-btn my-sm-0 px-3 me-3" type="submit">
           Buy now
         </button>
       </nav>
 
       <nav
         id="mainNav"
-        class="navbar navbar-expand-lg bg-white py-4 shadow-nav mt-4 d-flex justify-content-around px-5"
+        class="navbar navbar-expand-lg bg-white pt-4 pb-3 shadow-nav mt-4 d-flex justify-content-around px-5"
       >
         <div class="container px-5">
           <a class="navbar-brand fw-bold ps-2" href="#">
@@ -51,12 +63,23 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="custom-toggler-icon">
-              <span class="line top"></span>
-              <span class="line middle"></span>
-              <span class="line bottom"></span>
-              <span class="line middle"></span>
-            </span>
+            <input type="checkbox" id="menu-toggle" class="d-none" />
+
+            <label
+              for="menu-toggle"
+              class="navbar-toggler custom-toggler menu-open border-0 p-0"
+            >
+              <span class="custom-toggler-icon">
+                <span class="line top"></span>
+                <span class="line middle"></span>
+                <span class="line bottom"></span>
+                <span class="line middle"></span>
+              </span>
+            </label>
+            <label for="menu-toggle" class="menu-close">
+              <i class="fa-regular fa-rectangle-xmark"></i>
+              <!-- Close (X) icon -->
+            </label>
           </button>
 
           <div
@@ -78,6 +101,7 @@
                 <a
                   class="nav-link dropdown-toggle"
                   href="#"
+                  onclick="showSections('services')"
                   role="button"
                   data-bs-toggle="dropdown"
                   >Services</a
@@ -86,7 +110,7 @@
                   <li>
                     <a
                       class="dropdown-item"
-                      onclick="showSections('services')"
+                      onclick="showSections('serviceDetails')"
                       href="#"
                       >Service Detail</a
                     >
@@ -242,6 +266,8 @@
         </div>
       </div>
     </section>
+
+    <!-- services  -->
     <section
       id="section14"
       class="section hero-section2 d-flex flex-column pt-5"
@@ -253,11 +279,353 @@
             <p class="text-success-color fw-semibold">
               Exploring the Expertise of Digiqu's Dynamic Team
             </p>
-            <h1 class="display-3 fw-bold">Service Details</h1>
+            <h1 class="display-3 fw-bold">Services</h1>
           </div>
 
           <!-- Right image with grid background -->
           <div class="col-lg-6 position-relative"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- service details  -->
+    <section
+      id="section29"
+      class="section hero-section2 d-flex flex-column pt-5"
+    >
+      <div class="container-fluid position-relative bg-grid px-5">
+        <div class="row align-items-center">
+          <!-- Left text -->
+          <div class="col-lg-6 px-5 scroll-animate mt-5 scroll-animate">
+            <p class="text-success-color fw-semibold">
+              Exploring the Expertise of Digiqu's Dynamic Team
+            </p>
+            <h1 class="display-3 fw-bold">Services Detail</h1>
+          </div>
+
+          <!-- Right image with grid background -->
+          <div class="col-lg-6 position-relative"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section30" class="section bg-light">
+      <div class="container pb-5 scroll-animate">
+        <div>
+          <img
+            src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/creative-team-web-designer-planning-application-de-2023-04-26-00-18-39-utc-768x512.jpg"
+            alt="img"
+            class="img-fluid mb-3 img-service rounded-4"
+          />
+          <p class="para-text text-secondary">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat.
+            Lorem, ipsum dolor.
+          </p>
+        </div>
+        <div>
+          <h2 class="fw-bold">Web Design and Development</h2>
+          <p class="para-text text-secondary">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequuntur, molestias dicta temporibus excepturi obcaecati illo,
+            laboriosam veritatis animi itaque saepe ducimus. Nemo doloribus
+            mollitia culpa dolore illum in, repudiandae itaque. Rem hic ullam
+            praesentium repellat doloribus repellendus fugiat architecto
+            molestiae.
+          </p>
+          <p class="para-text text-secondary">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequuntur, molestias dicta temporibus excepturi obcaecati illo,
+            laboriosam veritatis animi itaque saepe ducimus.
+          </p>
+          <p class="para-text text-secondary">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequuntur, molestias dicta temporibus excepturi obcaecati illo,
+            laboriosam veritatis animi itaque saepe ducimus. Nemo doloribus
+            mollitia culpa dolore illum in, repudiandae itaque. Rem hic ullam .
+          </p>
+        </div>
+        <div class="row mb-2">
+          <div class="col-md-6">
+            <img
+              src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/business-people-meeting-and-laptop-for-collaborat-2022-12-22-19-29-34-utc-768x512.jpg"
+              alt="img"
+              class="img-fluid imgs rounded-4"
+            />
+          </div>
+          <div class="col-md-6">
+            <img
+              src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/shot-of-a-group-of-businesspeople-using-a-digital-2023-01-09-22-20-18-utc-768x511.jpg"
+              alt="img"
+              class="img-fluid imgs rounded-4"
+            />
+          </div>
+        </div>
+        <div class="ms-0 mb-3 service">
+          <h4 class="fw-bold mx-4">
+            Our machine learning development services include:
+          </h4>
+          <ul class="list">
+            <li class="color para-text">
+              <i class="fa-regular fa-circle-dot"></i>
+              Conducting in-depth research using a variety of tools and
+              resources
+            </li>
+            <li class="color para-text">
+              <i class="fa-regular fa-circle-dot"></i>
+              Developing research proposals and methodologies
+            </li>
+            <li class="color para-text">
+              <i class="fa-regular fa-circle-dot"></i>Reviewing and analyzing
+              academic literature
+            </li>
+          </ul>
+        </div>
+        <div
+          class="accordion scroll-animate"
+          id="faqAccordionB"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <!-- Accordion Item 1 -->
+          <div class="accordion-item rounded-5">
+            <h2 class="accordion-header" id="headingB1">
+              <button
+                class="accordion-button d-flex justify-content-between align-items-center"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseB1"
+                aria-expanded="true"
+                aria-controls="collapseB1"
+              >
+                <div class="d-flex align-items-center">
+                  <span class="question-number fw-bold me-2">1.</span>
+                  <span class="question-text">What services do we offer?</span>
+                </div>
+                <i class="fa-solid fa-angle-down arrow-icon"></i>
+              </button>
+            </h2>
+            <div
+              id="collapseB1"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingB1"
+              data-bs-parent="#faqAccordionB"
+            >
+              <div class="accordion-body">
+                <p class="para-text text-secondary">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod tempor incididunt. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Eius earum ad sequi
+                  exercitationem est nulla, quam mollitia eos temporibus fuga.
+                </p>
+                <p class="para-text text-secondary">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod tempor incididunt. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Eius earum ad sequi
+                  exercitationem est nulla, quam mollitia eos temporibus fuga.
+                </p>
+                <p class="para-text text-secondary">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod tempor incididunt. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Eius earum ad sequi
+                  exercitationem est nulla, quam mollitia eos temporibus fuga.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Item 2 -->
+          <div
+            class="accordion-item rounded-5"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <h2 class="accordion-header" id="headingB2">
+              <button
+                class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseB2"
+                aria-expanded="false"
+                aria-controls="collapseB2"
+              >
+                <div class="d-flex align-items-center">
+                  <span class="question-number fw-bold me-2">2.</span>
+                  <span class="question-text">How do we collaborate?</span>
+                </div>
+                <i class="fa-solid fa-angle-down arrow-icon"></i>
+              </button>
+            </h2>
+            <div
+              id="collapseB2"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingB2"
+              data-bs-parent="#faqAccordionB"
+            >
+              <div class="accordion-body">
+                <p class="para-text text-secondary">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod tempor incididunt. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Eius earum ad sequi
+                  exercitationem est nulla, quam mollitia eos temporibus fuga.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Earum, placeat?
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Item 3 -->
+          <div
+            class="accordion-item rounded-5"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <h2 class="accordion-header" id="headingB3">
+              <button
+                class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseB3"
+                aria-expanded="false"
+                aria-controls="collapseB3"
+              >
+                <div class="d-flex align-items-center">
+                  <span class="question-number fw-bold me-2">3.</span>
+                  <span class="question-text"
+                    >Can we handle both small and large scale projects?</span
+                  >
+                </div>
+                <i class="fa-solid fa-angle-down arrow-icon"></i>
+              </button>
+            </h2>
+            <div
+              id="collapseB3"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingB3"
+              data-bs-parent="#faqAccordionB"
+            >
+              <div class="accordion-body">
+                <p class="para-text text-secondary">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod tempor incididunt. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Eius earum ad sequi
+                  exercitationem est nulla, quam mollitia eos temporibus fuga.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="section31" class="section">
+      <div class="container mt-5">
+        <h1 class="my-5 fw-bold scroll-animate">More Services</h1>
+
+        <div class="row">
+          <div class="col-md-4">
+            <img
+              src="./images/img4.png"
+              alt="img"
+              class="img-fluid imgs scroll-animate"
+            />
+          </div>
+          <div
+            class="col-md-5 px-3 pt-5 flex-column justify-content-start align-item-center scroll-animate"
+          >
+            <h5 class="fw-bold">Web Design and Development</h5>
+            <p class="para-text1 text-secondary pt-2">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id,
+              repellat qui consequatur quia amet Lorem ipsum dolor sit amet
+              consectetur.
+            </p>
+          </div>
+          <div class="col-md-3 scroll-animate">
+            <div class="btn-wrapper">
+              <span class="icon1">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+              <button class="btn btn-- button mt-5">Learn More — Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <img
+              src="./images/img5.png"
+              alt="img"
+              class="img-fluid imgs scroll-animate"
+            />
+          </div>
+          <div
+            class="col-md-5 pe-3 pt-5 flex-column justify-content-start align-item-center scroll-animate"
+          >
+            <h5 class="fw-bold">Digital Marketing Strategy</h5>
+            <p class="para-text1 text-secondary pt-2">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id,
+              repellat qui consequatur quia Lorem ipsum dolor sit amet
+              consectetur.
+            </p>
+          </div>
+          <div class="col-md-3 scroll-animate">
+            <div class="btn-wrapper">
+              <span class="icon1">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+              <button class="btn btn-- button mt-5">Learn More — Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <img
+              src="./images/img6.png"
+              alt="img"
+              class="img-fluid imgs scroll-animate"
+            />
+          </div>
+          <div
+            class="col-md-5 pe-3 pt-5 flex-column justify-content-start align-item-center scroll-animate"
+          >
+            <h5 class="fw-bold">E-Commerce Solutions</h5>
+            <p class="para-text1 text-secondary pt-2">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id,
+              repellat qui Lorem ipsum dolor sit amet consectetur.
+            </p>
+          </div>
+          <div class="col-md-3 scroll-animate">
+            <div class="btn-wrapper">
+              <span class="icon1">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+              <button class="btn btn-- button mt-5">Learn More - Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <img
+              src="./images/img3.png"
+              alt="img"
+              class="img-fluid imgs scroll-animate"
+            />
+          </div>
+          <div
+            class="col-md-5 pe-3 d-flex pt-5 flex-column justify-content-start align-item-center scroll-animate"
+          >
+            <h5 class="fw-bold">Brand Identity and Design</h5>
+            <p class="para-text1 text-secondary pt-2">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id,
+              repellat qui consequatur Lorem ipsum dolor sit amet.
+            </p>
+          </div>
+          <div class="col-md-3 scroll-animate">
+            <div class="btn-wrapper">
+              <span class="icon1">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+              <button class="btn btn-- button mt-5">Learn More - Now</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -286,31 +654,31 @@
       </div>
     </section>
 
-    <section id="section24" class="section pt-5">
-      <div class="container-fluid bg-light pt-5 mt-5">
+    <section id="section24" class="section pt-5 bg-light">
+      <div class="container pt-5 mt-5">
         <div class="row">
           <div class="col-md-3 d-flex flex-column">
             <div>
-              <h5 class="fw-semibold">Services</h5>
+              <h6 class="fw-bold">Services</h6>
               <p class="text-secondary">Web Design and Development</p>
             </div>
             <div>
-              <h5 class="fw-semibold">Clients</h5>
+              <h6 class="fw-bold">Clients</h6>
               <p class="text-secondary">XYZ Corporation</p>
             </div>
             <div>
-              <h5 class="fw-semibold">Locations</h5>
+              <h6 class="fw-bold">Locations</h6>
               <p class="text-secondary">Modesto, California</p>
             </div>
             <div>
-              <h5 class="fw-semibold">Date</h5>
+              <h6 class="fw-bold">Date</h6>
               <p class="text-secondary">Jan 04, 2023</p>
             </div>
           </div>
           <div class="col-md-9 scroll-animate">
             <div>
-              <h2 class="fw-semibold">Project Overview</h2>
-              <p class="text-secondary">
+              <h3 class="fw-bold">Project Overview</h3>
+              <p class="text-secondary para-text">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus
                 qui dolorem fugiat dolore doloribus cupiditate ad praesentium
                 accusantium in exercitationem obcaecati deserunt nulla eum
@@ -318,13 +686,13 @@
                 suscipit quaerat, pariatur distinctio!
               </p>
 
-              <p class="text-secondary">
+              <p class="text-secondary para-text">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Commodi inventore fuga error. Neque quam dolore asperiores ut ea
                 pariatur, nihil, nam earum molestias voluptas accusamus?
               </p>
 
-              <p class="text-secondary">
+              <p class="text-secondary para-text">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Commodi inventore fuga error. Neque quam dolore asperiores ut ea
                 pariatur, nihil, nam earum molestias voluptas accusamus?
@@ -332,88 +700,98 @@
               <img
                 src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/business-people-meeting-and-laptop-for-collaborat-2022-12-22-19-29-34-utc-800x533.jpg"
                 alt="img"
-                class="img-fluid rounded-4"
+                class="img-fluid rounded-4 img2"
               />
               <img
                 src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/shot-of-a-group-of-businesspeople-using-a-digital-2023-01-09-22-20-18-utc-800x532.jpg"
                 alt="img"
-                class="img-fluid rounded-4"
+                class="img-fluid rounded-4 img2"
               />
             </div>
             <div>
-              <h2 class="fw-bold mx-4">Key Features and Achievements</h2>
-              <ul class="list">
-                <li class="color">
+              <h3 class="fw-bold my-2">Key Features and Achievements</h3>
+              <ul class="lists">
+                <li class="color para-text">
                   <i class="fa-regular fa-circle-dot"></i> Conducting in-depth
                   research using a variety of tools and resources
                 </li>
-                <li class="color">
+                <li class="color para-text">
                   <i class="fa-regular fa-circle-dot"></i>Analyzing data and
                   synthesizing information into a cohesive report
                 </li>
-                <li class="color">
+                <li class="color para-text">
                   <i class="fa-regular fa-circle-dot"></i>Developing research
                   proposals and methodologies
                 </li>
-                <li class="color">
+                <li class="color para-text">
                   <i class="fa-regular fa-circle-dot"></i> Reviewing and
                   analyzing academic literature
                 </li>
               </ul>
             </div>
             <div>
-              <h2 class="fw-bold mx-4">Results and Impact</h2>
-              <p class="text-secondary">
+              <h2 class="fw-bold my-2">Results and Impact</h2>
+              <p class="text-secondary para-text">
                 Enim ut sem viverra aliquet eget sit amet tellus cras. Vitae
                 sapien pellentesque habitant morbi tristique senectus et.
                 Quisque id diam vel quam elementum pulvinar. Egestas pretium
                 aenean pharetra magna ac.
               </p>
-              <p class="text-secondary">
+              <p class="text-secondary para-text mb-3">
                 Lectus arcu bibendum at varius vel pharetra vel. Ipsum dolor sit
                 amet consectetur adipiscing. Neque sodales ut etiam sit amet
                 nisl. Vel orci porta non pulvinar. Iaculis at erat pellentesque
                 adipiscing commodo elit at imperdiet.
               </p>
             </div>
-            <div class="accordion" id="faqAccordion">
+            <div
+              class="accordion scroll-animate"
+              id="faqAccordionC"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <!-- Accordion Item 1 -->
               <div class="accordion-item rounded-5">
-                <h2 class="accordion-header" id="headingOne">
+                <h2 class="accordion-header" id="headingC1">
                   <button
-                    class="accordion-button"
+                    class="accordion-button d-flex justify-content-between align-items-center"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseOne"
+                    data-bs-target="#collapseC1"
                     aria-expanded="true"
-                    aria-controls="collapseOne"
+                    aria-controls="collapseC1"
                   >
-                    <span class="question-number fw-bold">1.</span>
-                    What services do we offer?
+                    <div class="d-flex align-items-center">
+                      <span class="question-number fw-bold me-2">1.</span>
+                      <span class="question-text"
+                        >What services do we offer?</span
+                      >
+                    </div>
+                    <i class="fa-solid fa-angle-down arrow-icon"></i>
                   </button>
                 </h2>
                 <div
-                  id="collapseOne"
+                  id="collapseC1"
                   class="accordion-collapse collapse show"
-                  aria-labelledby="headingOne"
-                  data-bs-parent="#faqAccordion"
+                  aria-labelledby="headingC1"
+                  data-bs-parent="#faqAccordionC"
                 >
                   <div class="accordion-body">
-                    <p>
+                    <p class="para-text text-secondary">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Sed do eiusmod tempor incididunt. Lorem ipsum dolor sit
                       amet consectetur adipisicing elit. Eius earum ad sequi
                       exercitationem est nulla, quam mollitia eos temporibus
                       fuga.
                     </p>
-                    <p>
+                    <p class="para-text text-secondary">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Sed do eiusmod tempor incididunt. Lorem ipsum dolor sit
                       amet consectetur adipisicing elit. Eius earum ad sequi
                       exercitationem est nulla, quam mollitia eos temporibus
                       fuga.
                     </p>
-                    <p>
+                    <p class="para-text text-secondary">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Sed do eiusmod tempor incididunt. Lorem ipsum dolor sit
                       amet consectetur adipisicing elit. Eius earum ad sequi
@@ -425,28 +803,35 @@
               </div>
 
               <!-- Accordion Item 2 -->
-              <div class="accordion-item rounded-5">
-                <h2 class="accordion-header" id="headingTwo">
+              <div
+                class="accordion-item rounded-5"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <h2 class="accordion-header" id="headingB2">
                   <button
-                    class="accordion-button collapsed"
+                    class="accordion-button collapsed d-flex justify-content-between align-items-center"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo"
+                    data-bs-target="#collapseC2"
                     aria-expanded="false"
-                    aria-controls="collapseTwo"
+                    aria-controls="collapseC2"
                   >
-                    <span class="question-number fw-bold">2.</span>
-                    How do we collaborate?
+                    <div class="d-flex align-items-center">
+                      <span class="question-number fw-bold me-2">2.</span>
+                      <span class="question-text">How do we collaborate?</span>
+                    </div>
+                    <i class="fa-solid fa-angle-down arrow-icon"></i>
                   </button>
                 </h2>
                 <div
-                  id="collapseTwo"
+                  id="collapseC2"
                   class="accordion-collapse collapse"
-                  aria-labelledby="headingTwo"
-                  data-bs-parent="#faqAccordion"
+                  aria-labelledby="headingC2"
+                  data-bs-parent="#faqAccordionC"
                 >
                   <div class="accordion-body">
-                    <p>
+                    <p class="para-text text-secondary">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Sed do eiusmod tempor incididunt. Lorem ipsum dolor sit
                       amet consectetur adipisicing elit. Eius earum ad sequi
@@ -459,28 +844,38 @@
               </div>
 
               <!-- Accordion Item 3 -->
-              <div class="accordion-item rounded-5">
-                <h2 class="accordion-header" id="headingThree">
+              <div
+                class="accordion-item rounded-5"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <h2 class="accordion-header" id="headingC3">
                   <button
-                    class="accordion-button collapsed"
+                    class="accordion-button collapsed d-flex justify-content-between align-items-center"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree"
+                    data-bs-target="#collapseC3"
                     aria-expanded="false"
-                    aria-controls="collapseThree"
+                    aria-controls="collapseC3"
                   >
-                    <span class="question-number fw-bold">3.</span>
-                    Can we handle both small and large scale projects?
+                    <div class="d-flex align-items-center">
+                      <span class="question-number fw-bold me-2">3.</span>
+                      <span class="question-text"
+                        >Can we handle both small and large scale
+                        projects?</span
+                      >
+                    </div>
+                    <i class="fa-solid fa-angle-down arrow-icon"></i>
                   </button>
                 </h2>
                 <div
-                  id="collapseThree"
+                  id="collapseC3"
                   class="accordion-collapse collapse"
-                  aria-labelledby="headingThree"
-                  data-bs-parent="#faqAccordion"
+                  aria-labelledby="headingC3"
+                  data-bs-parent="#faqAccordionC"
                 >
                   <div class="accordion-body">
-                    <p>
+                    <p class="para-text text-secondary">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Sed do eiusmod tempor incididunt. Lorem ipsum dolor sit
                       amet consectetur adipisicing elit. Eius earum ad sequi
@@ -539,74 +934,75 @@
     </section>
     <section id="section25" class="section">
       <div class="container py-5">
-        <div class="row g-4">
+        <div class="row g-4 mb-4">
           <!-- Card 1 -->
           <div class="col-md-4">
-            <div class="position-relative team-card bg-white">
+            <div class="card blog-card h-100 p-3 scroll-animate">
               <img
-                src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/portrait-of-a-young-businesswoman-using-a-digital-2022-09-27-15-33-38-utc.jpg"
-                alt="Alex Thompson"
-                class="team-img"
+                src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/smiling-business-man-using-digital-tablet-2022-11-29-15-53-00-utc.jpg"
+                class="card-img-top rounded"
+                alt="E-Commerce"
               />
-              <div class="arrow-wrapper1">
-                <div class="arrow-main">
+              <!-- Arrow icon -->
+              <div class="hover-icons">
+                <div class="arrow-icon2">
                   <i class="fa-solid fa-arrow-left"></i>
                 </div>
-                <div class="social-icons">
-                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                  <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
-                  <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <div class="social-icons2">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
               </div>
-              <div class="card-body text-center">
-                <p class="role mb-1">CEO</p>
-                <h5>Alex Thompson</h5>
+              <div class="card-body">
+                <p class="text-success-color mb-0">CEO</p>
+                <h5 class="fw-bold mt-0">Alex Thompson</h5>
               </div>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="position-relative team-card bg-white">
+            <div class="card blog-card h-100 p-3 scroll-animate">
               <img
-                src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/portrait-of-a-confident-young-businesswoman-using-2022-09-30-21-40-30-utc.jpg"
-                alt="Alex Thompson"
-                class="team-img"
+                src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/shot-of-a-young-businesswoman-using-a-digital-tabl-2022-10-06-02-02-28-utc.jpg"
+                class="card-img-top rounded"
+                alt="E-Commerce"
               />
-              <div class="arrow-wrapper1">
-                <div class="arrow-main">
+              <div class="hover-icons">
+                <div class="arrow-icon2">
                   <i class="fa-solid fa-arrow-left"></i>
                 </div>
-                <div class="social-icons">
-                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                  <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
-                  <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <div class="social-icons2">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
               </div>
-              <div class="card-body text-center">
-                <p class="role mb-1">CEO</p>
-                <h5>Alex Thompson</h5>
+              <div class="card-body">
+                <p class="text-success-color mb-0">Creative Director</p>
+                <h5 class="fw-bold mt-0">Jessica Hayes</h5>
               </div>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="position-relative team-card bg-white">
+            <div class="card blog-card h-100 p-3 scroll-animate">
               <img
-                src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/cropped-shot-of-a-businesswoman-holding-a-digital-2022-12-10-00-23-21-utc.jpg"
-                alt="Alex Thompson"
-                class="team-img"
+                src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/welcome-to-the-digital-age-2023-01-09-19-31-06-utc.jpg"
+                class="card-img-top rounded"
+                alt="E-Commerce"
               />
-              <div class="arrow-wrapper1">
-                <div class="arrow-main">
+              <div class="hover-icons">
+                <div class="arrow-icon2">
                   <i class="fa-solid fa-arrow-left"></i>
                 </div>
-                <div class="social-icons">
-                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                  <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
-                  <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <div class="social-icons2">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
               </div>
-              <div class="card-body text-center">
-                <p class="role mb-1">CEO</p>
-                <h5>Alex Thompson</h5>
+              <div class="card-body">
+                <p class="text-success-color mb-0">Lead Developer</p>
+                <h5 class="fw-bold mt-0">Daniel Kim</h5>
               </div>
             </div>
           </div>
@@ -614,71 +1010,71 @@
         <div class="row g-4">
           <!-- Card 1 -->
           <div class="col-md-4">
-            <div class="position-relative team-card bg-white">
+            <div class="card blog-card h-100 p-3 scroll-animate">
               <img
-                src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/smiling-business-man-using-digital-tablet-2022-11-29-15-53-00-utc.jpg"
-                alt="Alex Thompson"
-                class="team-img"
+                src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/portrait-of-a-young-businesswoman-using-a-digital-2022-09-27-15-33-38-utc.jpg"
+                class="card-img-top rounded"
+                alt="E-Commerce"
               />
-              <div class="arrow-wrapper1">
-                <div class="arrow-main">
+              <div class="hover-icons">
+                <div class="arrow-icon2">
                   <i class="fa-solid fa-arrow-left"></i>
                 </div>
-                <div class="social-icons">
-                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                  <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
-                  <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <div class="social-icons2">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
               </div>
-              <div class="card-body text-center">
-                <p class="role mb-1">CEO</p>
-                <h5>Alex Thompson</h5>
+              <div class="card-body">
+                <p class="text-success-color mb-0">Marketing Manager</p>
+                <h5 class="fw-bold mt-0">Olivia Carter</h5>
               </div>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="position-relative team-card bg-white">
+            <div class="card blog-card h-100 p-3 scroll-animate">
               <img
-                src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/shot-of-a-young-businesswoman-using-a-digital-tabl-2022-10-06-02-02-28-utc.jpg"
-                alt="Alex Thompson"
-                class="team-img"
+                src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/portrait-of-a-confident-young-businesswoman-using-2022-09-30-21-40-30-utc.jpg"
+                class="card-img-top rounded"
+                alt="E-Commerce"
               />
-              <div class="arrow-wrapper1">
-                <div class="arrow-main">
+              <div class="hover-icons">
+                <div class="arrow-icon2">
                   <i class="fa-solid fa-arrow-left"></i>
                 </div>
-                <div class="social-icons">
-                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                  <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
-                  <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <div class="social-icons2">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
               </div>
-              <div class="card-body text-center">
-                <p class="role mb-1">CEO</p>
-                <h5>Alex Thompson</h5>
+              <div class="card-body">
+                <p class="text-success-color mb-0">Content Writer</p>
+                <h5 class="fw-bold mt-0">Hannah Lee</h5>
               </div>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="position-relative team-card bg-white">
+            <div class="card blog-card h-100 p-3 scroll-animate">
               <img
-                src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/welcome-to-the-digital-age-2023-01-09-19-31-06-utc.jpg"
-                alt="Alex Thompson"
-                class="team-img"
+                src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/cropped-shot-of-a-businesswoman-holding-a-digital-2022-12-10-00-23-21-utc.jpg"
+                class="card-img-top rounded"
+                alt="E-Commerce"
               />
-              <div class="arrow-wrapper1">
-                <div class="arrow-main">
+              <div class="hover-icons">
+                <div class="arrow-icon2">
                   <i class="fa-solid fa-arrow-left"></i>
                 </div>
-                <div class="social-icons">
-                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                  <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
-                  <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <div class="social-icons2">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
               </div>
-              <div class="card-body text-center">
-                <p class="role mb-1">CEO</p>
-                <h5>Alex Thompson</h5>
+              <div class="card-body">
+                <p class="text-success-color mb-0">Project Manager</p>
+                <h5 class="fw-bold mt-0">Emily Turner</h5>
               </div>
             </div>
           </div>
@@ -900,16 +1296,21 @@
       class="section hero-section2 d-flex flex-column pt-5"
     >
       <div class="container-fluid position-relative bg-grid px-5">
-        <div class="row align-items-center">
+        <div class="row align-items-center mb-5">
           <!-- Left text -->
-          <div class="col-lg-6 px-5 scroll-animate mt-5">
+          <div class="col-lg-6 px-5 mt-5">
             <h1 class="error fw-bold">404</h1>
             <h3 class="fw-bold">Oops, page not found</h3>
-            <p class="text-secondary">
+            <p class="para-text text-secondary scroll-animate">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
               tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
             </p>
-            <button class="btn btn--">Go Back - Home</button>
+            <div class="btn-wrapper2 mt-5">
+              <button class="btn btn--2">Go Back — Home</button>
+              <span class="icon2">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </div>
           </div>
 
           <!-- Right image with grid background -->
@@ -962,10 +1363,10 @@
       id="section28"
       class="section hero-section2 d-flex flex-column py-5 mt-2"
     >
-      <div class="container-fluid position-relative bg-grid px-4">
+      <div class="container position-relative bg-grid px-4">
         <div class="row align-items-center">
           <!-- Left text -->
-          <div class="col-lg-6 px-2 scroll-animate mt-5 mt-5">
+          <div class="col-lg-6 px-2 mt-5 mt-5">
             <div class="footer-logo col-md-3">
               <h2>digiqu<span class="dot">.</span></h2>
             </div>
@@ -1098,9 +1499,9 @@
       </div>
     </section>
 
-    <section id="section3" class="section d-flex flex-column p-2 bg-dark">
-      <div class="container">
-        <div class="row mt-5">
+    <section id="section3" class="section d-flex flex-column p-2 bg-black">
+      <div class="container pb-5">
+        <div class="row mt-4">
           <div
             class="col-md-6 d-flex flex-column align-items-center justify-content-center"
           >
@@ -1113,15 +1514,15 @@
           <div
             class="col-md-6 text-white d-flex flex-column align-item-center justify-content-center"
           >
-            <h1 class="mb-5 fw-bold scroll-animate">
+            <h1 class="mb-2 fw-bold scroll-animate mx-4">
               Our Passion for Innovation
             </h1>
-            <p class="scroll-animate">
+            <p class="scroll-animate para-text mx-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
               suscipit accusamus excepturi labore exercitationem tempore rerum
               cumque quos eveniet quaerat.
             </p>
-            <p class="scroll-animate">
+            <p class="scroll-animate para-text mx-4">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius
               impedit vel nostrum atque ex in!
             </p>
@@ -1129,57 +1530,55 @@
         </div>
       </div>
 
-      <div class="container">
-        <div class="row mt-3">
+      <div class="container mb-5">
+        <div class="row mt-1">
           <div class="col-md-6 text-white d-flext justified-content-between">
-            <h1 class="mb-5 fw-bold scroll-animate">
+            <h1 class="mb-3 fw-bold scroll-animate me-4 ms-2">
               Expertise that Speaks Volumes
             </h1>
-            <p class="scroll-animate">
+            <p class="scroll-animate para-text me-4 ms-2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
               suscipit accusamus excepturi labore exercitationem tempore rerum
               cumque quos eveniet quaerat.
             </p>
-            <p class="scroll-animate">
+            <p class="scroll-animate para-text me-4 ms-2">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius
               impedit vel nostrum atque ex in!
             </p>
-            <div class="cta-banner1 mt-5 scroll-animate">
+            <div class="cta-banner1 mt-3 me-5 scroll-animate">
               <div class="cta-icon1 me-3">
                 <div class="circle-icon1">
                   <i class="fa-solid fa-arrow-right"></i>
                 </div>
               </div>
               <div>
-                <h5 class="mb-1 fw-semibold text-success-color">
-                  Collaborative
-                </h5>
+                <h6 class="mb-1 fw-bold text-success-color">Collaborative</h6>
                 <p class="mb-0 para-text text-secondary">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 </p>
               </div>
             </div>
-            <div class="cta-banner1 mt-5 scroll-animate">
+            <div class="cta-banner1 mt-3 me-5 scroll-animate">
               <div class="cta-icon1 me-3">
                 <div class="circle-icon1">
                   <i class="fa-solid fa-arrow-right"></i>
                 </div>
               </div>
               <div>
-                <h5 class="mb-1 fw-semibold text-success-color">Creativity</h5>
+                <h6 class="mb-1 fw-bold text-success-color">Creativity</h6>
                 <p class="mb-0 para-text text-secondary">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 </p>
               </div>
             </div>
-            <div class="cta-banner1 mt-5 scroll-animate">
+            <div class="cta-banner1 mt-3 me-5 scroll-animate">
               <div class="cta-icon1 me-3">
                 <div class="circle-icon1">
                   <i class="fa-solid fa-arrow-right"></i>
                 </div>
               </div>
               <div>
-                <h5 class="mb-1 fw-semibold text-success-color">Excellence</h5>
+                <h6 class="mb-1 fw-bold text-success-color">Excellence</h6>
                 <p class="mb-0 para-text text-secondary">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit,.
                 </p>
@@ -1196,8 +1595,8 @@
         </div>
       </div>
     </section>
-    <section id="section4" class="section">
-      <div class="container-fluid bg- py-5">
+    <section id="section4" class="section bg-">
+      <div class="container py-5">
         <h1 class="mb-5 pt-4 mx-5 fw-bold scroll-animate">
           Bringing Ideas to Life
         </h1>
@@ -1209,8 +1608,8 @@
             <div class="col-md-4 mb-4 scroll-animate">
               <div class="process-card active-card p-4 rounded-4 h-100">
                 <div class="step-number">01</div>
-                <h3 class="fw-bold mt-3">Discovery and Strategy</h3>
-                <p class="mb-0">
+                <h4 class="fw-bold mt-3 text-light">Discovery and Strategy</h4>
+                <p class="mb-0 para-text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
@@ -1221,8 +1620,8 @@
             <div class="col-md-4 scroll-animate">
               <div class="process-card p-4 rounded-4 h-100">
                 <div class="step-number">02</div>
-                <h3 class="fw-bold mt-3">Design and Development</h3>
-                <p class="mb-0">
+                <h4 class="fw-bold mt-3">Design and Development</h4>
+                <p class="mb-0 para-text text-secondary">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
@@ -1233,8 +1632,8 @@
             <div class="col-md-4 scroll-animate">
               <div class="process-card p-4 rounded-4 h-100">
                 <div class="step-number">03</div>
-                <h3 class="fw-bold mt-3">Launch and Optimization</h3>
-                <p class="mb-0">
+                <h4 class="fw-bold mt-3">Launch and Optimization</h4>
+                <p class="mb-0 para-text text-secondary">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
@@ -1245,12 +1644,12 @@
       </div>
     </section>
     <section id="section5" class="section">
-      <div class="container-fluid">
+      <div class="container">
         <h1 class="my-5 fw-bold scroll-animate">
           Our Comprehensive Services Suite
         </h1>
 
-        <div class="row mx-2">
+        <div class="row">
           <div class="col-md-4">
             <img
               src="./images/img4.png"
@@ -1261,23 +1660,23 @@
           <div
             class="col-md-5 px-3 pt-5 flex-column justify-content-start align-item-center scroll-animate"
           >
-            <h3 class="">Web Design and Development</h3>
-            <p class="text-secondary">
+            <h5 class="fw-bold">Web Design and Development</h5>
+            <p class="para-text1 text-secondary pt-2">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id,
-              repellat qui consequatur quia amet facere quas sequi laborum cum
-              accusamus!
+              repellat qui consequatur quia amet Lorem ipsum dolor sit amet
+              consectetur.
             </p>
           </div>
           <div class="col-md-3 scroll-animate">
             <div class="btn-wrapper">
-              <span class="icon">
+              <span class="icon1">
                 <i class="fa-solid fa-arrow-right"></i>
               </span>
-              <button class="btn btn-- mt-5">Learn More — Now</button>
+              <button class="btn btn-- button mt-5">Learn More — Now</button>
             </div>
           </div>
         </div>
-        <div class="row mx-2">
+        <div class="row">
           <div class="col-md-4">
             <img
               src="./images/img5.png"
@@ -1286,25 +1685,25 @@
             />
           </div>
           <div
-            class="col-md-5 px-3 pt-5 flex-column justify-content-start align-item-center scroll-animate"
+            class="col-md-5 pe-3 pt-5 flex-column justify-content-start align-item-center scroll-animate"
           >
-            <h3>Digital Marketing Strategy</h3>
-            <p class="text-secondary">
+            <h5 class="fw-bold">Digital Marketing Strategy</h5>
+            <p class="para-text1 text-secondary pt-2">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id,
-              repellat qui consequatur quia amet facere quas sequi laborum cum
-              accusamus!
+              repellat qui consequatur quia Lorem ipsum dolor sit amet
+              consectetur.
             </p>
           </div>
           <div class="col-md-3 scroll-animate">
             <div class="btn-wrapper">
-              <span class="icon">
+              <span class="icon1">
                 <i class="fa-solid fa-arrow-right"></i>
               </span>
-              <button class="btn btn-- mt-5">Learn More — Now</button>
+              <button class="btn btn-- button mt-5">Learn More — Now</button>
             </div>
           </div>
         </div>
-        <div class="row mx-2">
+        <div class="row">
           <div class="col-md-4">
             <img
               src="./images/img6.png"
@@ -1313,25 +1712,24 @@
             />
           </div>
           <div
-            class="col-md-5 px-3 pt-5 flex-column justify-content-start align-item-center scroll-animate"
+            class="col-md-5 pe-3 pt-5 flex-column justify-content-start align-item-center scroll-animate"
           >
-            <h3>E-Commerce Solutions</h3>
-            <p class="text-secondary">
+            <h5 class="fw-bold">E-Commerce Solutions</h5>
+            <p class="para-text1 text-secondary pt-2">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id,
-              repellat qui consequatur quia amet facere quas sequi laborum cum
-              accusamus!
+              repellat qui Lorem ipsum dolor sit amet consectetur.
             </p>
           </div>
           <div class="col-md-3 scroll-animate">
             <div class="btn-wrapper">
-              <span class="icon">
+              <span class="icon1">
                 <i class="fa-solid fa-arrow-right"></i>
               </span>
-              <button class="btn btn-- mt-5">Learn More - Now</button>
+              <button class="btn btn-- button mt-5">Learn More - Now</button>
             </div>
           </div>
         </div>
-        <div class="row mx-2">
+        <div class="row">
           <div class="col-md-4">
             <img
               src="./images/img3.png"
@@ -1340,21 +1738,20 @@
             />
           </div>
           <div
-            class="col-md-5 px-3 d-flex pt-5 flex-column justify-content-start align-item-center scroll-animate"
+            class="col-md-5 pe-3 d-flex pt-5 flex-column justify-content-start align-item-center scroll-animate"
           >
-            <h3>Brand Identity and Design</h3>
-            <p class="text-secondary">
+            <h5 class="fw-bold">Brand Identity and Design</h5>
+            <p class="para-text1 text-secondary pt-2">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id,
-              repellat qui consequatur quia amet facere quas sequi laborum cum
-              accusamus!
+              repellat qui consequatur Lorem ipsum dolor sit amet.
             </p>
           </div>
           <div class="col-md-3 scroll-animate">
             <div class="btn-wrapper">
-              <span class="icon">
+              <span class="icon1">
                 <i class="fa-solid fa-arrow-right"></i>
               </span>
-              <button class="btn btn-- mt-5">Learn More - Now</button>
+              <button class="btn btn-- button mt-5">Learn More - Now</button>
             </div>
           </div>
         </div>
@@ -1362,8 +1759,8 @@
     </section>
     <section id="section6" class="section bg-black pb-0">
       <div class="container pt-5 px-3 pb-0">
-        <div class="row scroll-animate mb-0">
-          <div class="col-md-8">
+        <div class="row scroll-animate pb-0 mb-0 pt-5 col1">
+          <div class="col-md-8 pb-0 mb-0">
             <!-- Video Thumbnail with Play Button -->
             <div class="video-thumbnail-container position-relative">
               <img
@@ -1397,50 +1794,50 @@
             </div>
           </div>
 
-          <div class="col-md-4 text-white ps-4">
+          <div class="col-md-4 text-white ps-4 pb-0 mb-0">
             <h1 class="fw-bold mb-3">A Glance at Our Milestones</h1>
             <p class="mb-3">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
               possimus sint aliquam vel quam vero aliquid praesentium iste quos
               sit!
             </p>
-            <div class="cta-banner1 mt-5">
+            <div class="cta-banner3 mt-5">
               <div class="cta-icon1 me-3 my-4">
-                <div class="circle-icon1">
+                <div class="circle-icon3">
                   <i class="fa-solid fa-gift"></i>
                 </div>
               </div>
               <div class="my-4">
-                <h2 class="mb-0 fw-semibold text-success-color1">
+                <h4 class="mb-0 fw-bold text-success-color1">
                   <span class="count" data-target="72">0</span> K <sup>+</sup>
-                </h2>
+                </h4>
 
                 <p class="mb-0 text-black">Project Done</p>
               </div>
             </div>
-            <div class="cta-banner1 mt-4">
+            <div class="cta-banner3 mt-4">
               <div class="cta-icon1 me-3 my-4">
-                <div class="circle-icon1">
+                <div class="circle-icon3">
                   <i class="fa-solid fa-user"></i>
                 </div>
               </div>
               <div class="my-4">
-                <h2 class="mb-0 fw-semibold text-success-color1">
+                <h4 class="mb-0 fw-bold text-success-color1">
                   <span class="count" data-target="48">0</span> K <sup>+</sup>
-                </h2>
+                </h4>
                 <p class="mb-0 text-black">Happy Clients</p>
               </div>
             </div>
-            <div class="cta-banner1 mt-4">
+            <div class="cta-banner3 mt-4">
               <div class="cta-icon1 me-3 my-4">
-                <div class="circle-icon1">
+                <div class="circle-icon3">
                   <i class="fa-solid fa-hourglass-end"></i>
                 </div>
               </div>
               <div class="my-4">
-                <h2 class="mb-0 fw-semibold text-success-color1">
+                <h4 class="mb-0 fw-bold text-success-color1">
                   <span class="count" data-target="16">0</span> <sup>+</sup>
-                </h2>
+                </h4>
                 <p class="mb-0 text-black">Years Of Experience</p>
               </div>
             </div>
@@ -1450,12 +1847,12 @@
     </section>
     <section id="section7" class="section portfolio-section pb-5 bg-">
       <div class="container bg-light py-5">
-        <h1 class="mb-5 fw-bold mx-5 scroll-animate">
+        <h1 class="mb-5 fw-bold me-5 scroll-animate">
           Our Diverse Portfolio of Projects
         </h1>
 
         <!-- First Row -->
-        <div class="row align-items-center mb-5 scroll-animate">
+        <div class="row align-items-center mb-2 scroll-animate">
           <div class="col-md-8">
             <img
               src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/the-meeting-room-for-startup-companies-the-market-2023-04-18-16-40-42-utc-800x533.jpg"
@@ -1463,21 +1860,23 @@
               class="img-fluid rounded-4 shadow-lg img3"
             />
           </div>
-          <div class="col-md-4 mt-0">
+          <div class="col-md-4 mt-0 my-2">
             <div
-              class="container bg-white p-4 rounded-4 portfolio shadow-sm pb-5"
+              class="container bg-white p-3 rounded-4 portfolio shadow-sm pb-5"
             >
-              <h2 class="mb-4">Interactive Brand Website for Corporation</h2>
-              <p class="text-secondary mb-0">
+              <h3 class="mb-2 fw-bold">
+                Interactive Brand Website for Corporation
+              </h3>
+              <p class="text-secondary para-text mb-0">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam
                 ipsa fuga aut illo suscipit esse odio veniam labore repellat
                 nesciunt.
               </p>
-              <div class="btn-wrapper">
-                <span class="icon">
+              <div class="btn-wrapper2 mt-5">
+                <button class="btn btn--2">Learn More — Now</button>
+                <span class="icon2">
                   <i class="fa-solid fa-arrow-right"></i>
                 </span>
-                <button class="btn btn-- mt-5">Learn More — Now</button>
               </div>
             </div>
           </div>
@@ -1485,27 +1884,24 @@
 
         <!-- Second Row -->
         <div class="row align-items-center scroll-animate">
-          <div class="col-md-4">
-            <div
-              class="container bg-white p-4 portfolio rounded-4 shadow-sm mb-5"
-            >
-              <h2 class="mb-3">
+          <div class="col-md-4 mt-5">
+            <div class="container bg-white portfolio rounded-4 shadow-sm mb-5">
+              <h3 class="mb-2 pt-0 fw-bold">
                 Strategic Digital Marketing Campaign for Startup
-              </h2>
-              <p class="text-secondary mb-0">
+              </h3>
+              <p class="text-secondary para-text mb-1 mt-2">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam
-                ipsa fuga aut illo suscipit esse odio veniam labore repellat
-                nesciunt.
+                ipsa fuga
               </p>
-              <div class="btn-wrapper">
-                <span class="icon">
+              <div class="btn-wrapper2 mt-2">
+                <button class="btn btn--2">Learn More — Now</button>
+                <span class="icon2">
                   <i class="fa-solid fa-arrow-right"></i>
                 </span>
-                <button class="btn btn-- mt-5">Learn More — Now</button>
               </div>
             </div>
           </div>
-          <div class="col-md-8">
+          <div class="col-md-8 mt-0">
             <img
               src="https://freevetis.com/digiqu/wp-content/uploads/sites/67/2023/10/finance-mockup-and-hands-of-business-people-with-2023-02-28-05-48-09-utc-800x726.jpg"
               alt="img"
@@ -1525,20 +1921,20 @@
 
         <div
           class="accordion scroll-animate"
-          id="faqAccordion"
+          id="faqAccordionD"
           data-aos="fade-up"
           data-aos-delay="200"
         >
           <!-- Accordion Item 1 -->
           <div class="accordion-item rounded-5">
-            <h2 class="accordion-header" id="headingOne">
+            <h2 class="accordion-header" id="headingD1">
               <button
                 class="accordion-button d-flex justify-content-between align-items-center"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
+                data-bs-target="#collapseD1"
                 aria-expanded="true"
-                aria-controls="collapseOne"
+                aria-controls="collapseD1"
               >
                 <div class="d-flex align-items-center">
                   <span class="question-number fw-bold me-2">1.</span>
@@ -1548,13 +1944,13 @@
               </button>
             </h2>
             <div
-              id="collapseOne"
+              id="collapseD1"
               class="accordion-collapse collapse show"
-              aria-labelledby="headingOne"
-              data-bs-parent="#faqAccordion"
+              aria-labelledby="headingD1"
+              data-bs-parent="#faqAccordionD"
             >
               <div class="accordion-body">
-                <p>
+                <p class="para-text text-secondary">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                   do eiusmod tempor incididunt. Lorem ipsum dolor sit amet
                   consectetur adipisicing elit. Eius earum ad sequi
@@ -1566,7 +1962,7 @@
                   consectetur adipisicing elit. Eius earum ad sequi
                   exercitationem est nulla, quam mollitia eos temporibus fuga.
                 </p>
-                <p>
+                <p class="para-text text-secondary">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                   do eiusmod tempor incididunt. Lorem ipsum dolor sit amet
                   consectetur adipisicing elit. Eius earum ad sequi
@@ -1582,14 +1978,14 @@
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <h2 class="accordion-header" id="headingTwo">
+            <h2 class="accordion-header" id="headingD2">
               <button
                 class="accordion-button collapsed d-flex justify-content-between align-items-center"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo"
+                data-bs-target="#collapseD2"
                 aria-expanded="false"
-                aria-controls="collapseTwo"
+                aria-controls="collapseD2"
               >
                 <div class="d-flex align-items-center">
                   <span class="question-number fw-bold me-2">2.</span>
@@ -1599,13 +1995,13 @@
               </button>
             </h2>
             <div
-              id="collapseTwo"
+              id="collapseD2"
               class="accordion-collapse collapse"
-              aria-labelledby="headingTwo"
-              data-bs-parent="#faqAccordion"
+              aria-labelledby="headingD2"
+              data-bs-parent="#faqAccordionD"
             >
               <div class="accordion-body">
-                <p>
+                <p class="para-text text-secondary">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                   do eiusmod tempor incididunt. Lorem ipsum dolor sit amet
                   consectetur adipisicing elit. Eius earum ad sequi
@@ -1623,14 +2019,14 @@
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <h2 class="accordion-header" id="headingThree">
+            <h2 class="accordion-header" id="headingD3">
               <button
                 class="accordion-button collapsed d-flex justify-content-between align-items-center"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#collapseThree"
+                data-bs-target="#collapseD3"
                 aria-expanded="false"
-                aria-controls="collapseThree"
+                aria-controls="collapseD3"
               >
                 <div class="d-flex align-items-center">
                   <span class="question-number fw-bold me-2">3.</span>
@@ -1642,13 +2038,13 @@
               </button>
             </h2>
             <div
-              id="collapseThree"
+              id="collapseD3"
               class="accordion-collapse collapse"
-              aria-labelledby="headingThree"
-              data-bs-parent="#faqAccordion"
+              aria-labelledby="headingD3"
+              data-bs-parent="#faqAccordionD"
             >
               <div class="accordion-body">
-                <p>
+                <p class="para-text text-secondary">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                   do eiusmod tempor incididunt. Lorem ipsum dolor sit amet
                   consectetur adipisicing elit. Eius earum ad sequi
@@ -1664,14 +2060,14 @@
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <h2 class="accordion-header" id="headingFour">
+            <h2 class="accordion-header" id="headingD4">
               <button
                 class="accordion-button collapsed d-flex justify-content-between align-items-center"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#collapseFour"
+                data-bs-target="#collapseD4"
                 aria-expanded="false"
-                aria-controls="collapseFour"
+                aria-controls="collapseD4"
               >
                 <div class="d-flex align-items-center">
                   <span class="question-number fw-bold me-2">4.</span>
@@ -1683,13 +2079,13 @@
               </button>
             </h2>
             <div
-              id="collapseFour"
+              id="collapseD4"
               class="accordion-collapse collapse"
-              aria-labelledby="headingFour"
-              data-bs-parent="#faqAccordion"
+              aria-labelledby="headingD4"
+              data-bs-parent="#faqAccordionD"
             >
               <div class="accordion-body">
-                <p>
+                <p class="para-text text-secondary">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                   do eiusmod tempor incididunt. Lorem ipsum dolor sit
                   adipisicing elit. Eius earum ad sequi exercitationem est
@@ -1705,14 +2101,14 @@
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <h2 class="accordion-header" id="headingFive">
+            <h2 class="accordion-header" id="headingD5">
               <button
                 class="accordion-button collapsed d-flex justify-content-between align-items-center"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#collapseFive"
+                data-bs-target="#collapseD5"
                 aria-expanded="false"
-                aria-controls="collapseFive"
+                aria-controls="collapseD5"
               >
                 <div class="d-flex align-items-center">
                   <span class="question-number fw-bold me-2">5.</span>
@@ -1724,13 +2120,13 @@
               </button>
             </h2>
             <div
-              id="collapseFive"
+              id="collapseD5"
               class="accordion-collapse collapse"
-              aria-labelledby="headingFive"
-              data-bs-parent="#faqAccordion"
+              aria-labelledby="headingD5"
+              data-bs-parent="#faqAccordionD"
             >
               <div class="accordion-body">
-                <p>
+                <p class="para-text text-secondary">
                   Lorem eiusmod tempor incididunt. Lorem ipsum dolor sit amet
                   consectetur adipisicing elit. Eius earum ad sequi
                   exercitationem est nulla, quam mollitia eos temporibus fuga.
@@ -1774,18 +2170,18 @@
             </div>
           </div>
           <div class="col-12 col-md-8 col-sm-12">
-            <div class="accordion" id="faqAccordion">
+            <div class="accordion" id="faqAccordionA">
               <!-- Accordion Item 1 -->
               <!-- Accordion Item 1 -->
               <div class="accordion-item rounded-5">
-                <h2 class="accordion-header" id="headingOne">
+                <h2 class="accordion-header" id="headingA1">
                   <button
                     class="accordion-button d-flex justify-content-between align-items-center"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseOne"
+                    data-bs-target="#collapseA1"
                     aria-expanded="true"
-                    aria-controls="collapseOne"
+                    aria-controls="collapseA1"
                   >
                     <div class="d-flex align-items-center">
                       <span class="question-number fw-bold me-2">1.</span>
@@ -1797,27 +2193,27 @@
                   </button>
                 </h2>
                 <div
-                  id="collapseOne"
+                  id="collapseA1"
                   class="accordion-collapse collapse show"
-                  aria-labelledby="headingOne"
-                  data-bs-parent="#faqAccordion"
+                  aria-labelledby="headingA1"
+                  data-bs-parent="#faqAccordionA"
                 >
                   <div class="accordion-body">
-                    <p>
+                    <p class="para-text text-secondary">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Sed do eiusmod tempor incididunt. Lorem ipsum dolor sit
                       amet consectetur adipisicing elit. Eius earum ad sequi
                       exercitationem est nulla, quam mollitia eos temporibus
                       fuga.
                     </p>
-                    <p>
+                    <p class="para-text text-secondary">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Sed do eiusmod tempor incididunt. Lorem ipsum dolor sit
                       amet consectetur adipisicing elit. Eius earum ad sequi
                       exercitationem est nulla, quam mollitia eos temporibus
                       fuga.
                     </p>
-                    <p>
+                    <p class="para-text text-secondary">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Sed do eiusmod tempor incididunt. Lorem ipsum dolor sit
                       amet consectetur adipisicing elit. Eius earum ad sequi
@@ -1834,14 +2230,14 @@
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                <h2 class="accordion-header" id="headingTwo">
+                <h2 class="accordion-header" id="headingA2">
                   <button
                     class="accordion-button collapsed d-flex justify-content-between align-items-center"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo"
+                    data-bs-target="#collapseA2"
                     aria-expanded="false"
-                    aria-controls="collapseTwo"
+                    aria-controls="collapseA2"
                   >
                     <div class="d-flex align-items-center">
                       <span class="question-number fw-bold me-2">2.</span>
@@ -1851,13 +2247,13 @@
                   </button>
                 </h2>
                 <div
-                  id="collapseTwo"
+                  id="collapseA2"
                   class="accordion-collapse collapse"
-                  aria-labelledby="headingTwo"
-                  data-bs-parent="#faqAccordion"
+                  aria-labelledby="headingA2"
+                  data-bs-parent="#faqAccordionA"
                 >
                   <div class="accordion-body">
-                    <p>
+                    <p class="para-text text-secondary">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Sed do eiusmod tempor incididunt. Lorem ipsum dolor sit
                       amet consectetur adipisicing elit. Eius earum ad sequi
@@ -1875,14 +2271,14 @@
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                <h2 class="accordion-header" id="headingThree">
+                <h2 class="accordion-header" id="headingA3">
                   <button
                     class="accordion-button collapsed d-flex justify-content-between align-items-center"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree"
+                    data-bs-target="#collapseA3"
                     aria-expanded="false"
-                    aria-controls="collapseThree"
+                    aria-controls="collapseA3"
                   >
                     <div class="d-flex align-items-center">
                       <span class="question-number fw-bold me-2">3.</span>
@@ -1895,13 +2291,13 @@
                   </button>
                 </h2>
                 <div
-                  id="collapseThree"
+                  id="collapseA3"
                   class="accordion-collapse collapse"
-                  aria-labelledby="headingThree"
-                  data-bs-parent="#faqAccordion"
+                  aria-labelledby="headingA3"
+                  data-bs-parent="#faqAccordionA"
                 >
                   <div class="accordion-body">
-                    <p>
+                    <p class="para-text text-secondary">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Sed do eiusmod tempor incididunt. Lorem ipsum dolor sit
                       amet consectetur adipisicing elit. Eius earum ad sequi
@@ -1918,14 +2314,14 @@
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                <h2 class="accordion-header" id="headingFour">
+                <h2 class="accordion-header" id="headingA4">
                   <button
                     class="accordion-button collapsed d-flex justify-content-between align-items-center"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseFour"
+                    data-bs-target="#collapseA4"
                     aria-expanded="false"
-                    aria-controls="collapseFour"
+                    aria-controls="collapseA4"
                   >
                     <div class="d-flex align-items-center">
                       <span class="question-number fw-bold me-2">4.</span>
@@ -1937,13 +2333,13 @@
                   </button>
                 </h2>
                 <div
-                  id="collapseFour"
+                  id="collapseA4"
                   class="accordion-collapse collapse"
-                  aria-labelledby="headingFour"
-                  data-bs-parent="#faqAccordion"
+                  aria-labelledby="headingA4"
+                  data-bs-parent="#faqAccordionA"
                 >
                   <div class="accordion-body">
-                    <p>
+                    <p class="para-text text-secondary">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Sed do eiusmod tempor incididunt. Lorem ipsum dolor sit
                       adipisicing elit. Eius earum ad sequi exercitationem est
@@ -1959,14 +2355,14 @@
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                <h2 class="accordion-header" id="headingFive">
+                <h2 class="accordion-header" id="headingA5">
                   <button
                     class="accordion-button collapsed d-flex justify-content-between align-items-center"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseFive"
+                    data-bs-target="#collapseA5"
                     aria-expanded="false"
-                    aria-controls="collapseFive"
+                    aria-controls="collapseA5"
                   >
                     <div class="d-flex align-items-center">
                       <span class="question-number fw-bold me-2">5.</span>
@@ -1979,13 +2375,13 @@
                   </button>
                 </h2>
                 <div
-                  id="collapseFive"
+                  id="collapseA5"
                   class="accordion-collapse collapse"
-                  aria-labelledby="headingFive"
-                  data-bs-parent="#faqAccordion"
+                  aria-labelledby="headingA5"
+                  data-bs-parent="#faqAccordionA"
                 >
                   <div class="accordion-body">
-                    <p>
+                    <p class="para-text text-secondary">
                       Lorem eiusmod tempor incididunt. Lorem ipsum dolor sit
                       amet consectetur adipisicing elit. Eius earum ad sequi
                       exercitationem est nulla, quam mollitia eos temporibus
@@ -2078,7 +2474,7 @@
 
     <!-- portfolio  -->
     <section id="section10" class="section testimonial-section">
-      <div class="d-flex justify-content-between">
+      <div class="container d-flex justify-content-between">
         <h1 class="section-title fw-bold mx-4 scroll-animate">
           Hear It From Our Clients
         </h1>
@@ -2107,7 +2503,7 @@
                 <p class="position">CTO, Tech Innovators</p>
               </div>
             </div>
-            <p class="text-start text-secondary mt-3">
+            <p class="text-start text-secondary mt-3 para-text my-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
               ipsum dolor sit amet consectetur adipisicing elit. Fugit,
               deleniti?
@@ -2125,7 +2521,7 @@
                 <p class="position">CTO, Tech Innovators</p>
               </div>
             </div>
-            <p class="text-start text-secondary mt-3">
+            <p class="text-start text-secondary mt-3 para-text my-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
               ipsum dolor sit amet consectetur adipisicing elit. Fugit,
               deleniti?
@@ -2143,7 +2539,7 @@
                 <p class="position">CTO, Tech Innovators</p>
               </div>
             </div>
-            <p class="text-start text-secondary mt-3">
+            <p class="text-start text-secondary mt-3 para-text my-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
               ipsum dolor sit amet consectetur adipisicing elit. Fugit,
               deleniti?
@@ -2161,7 +2557,7 @@
                 <p class="position">CTO, Tech Innovators</p>
               </div>
             </div>
-            <p class="text-start text-secondary mt-3">
+            <p class="text-start text-secondary mt-3 para-text my-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
               ipsum dolor sit amet consectetur adipisicing elit. Fugit,
               deleniti?
@@ -2179,7 +2575,7 @@
                 <p class="position">CTO, Tech Innovators</p>
               </div>
             </div>
-            <p class="text-start text-secondary mt-3">
+            <p class="text-start text-secondary mt-3 para-text my-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
               ipsum dolor sit amet consectetur adipisicing elit. Fugit,
               deleniti?
@@ -2197,7 +2593,7 @@
                 <p class="position">CTO, Tech Innovators</p>
               </div>
             </div>
-            <p class="text-start text-secondary mt-3">
+            <p class="text-start text-secondary mt-3 para-text my-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
               ipsum dolor sit amet consectetur adipisicing elit. Fugit,
               deleniti?
@@ -2210,9 +2606,14 @@
     <!-- blog  -->
     <section id="section11" class="section news mb-5">
       <div class="container-fluid">
-        <div class="d-flex justify-content-between m-5">
-          <h1 class="mt-5 fw-bold scroll-animate">Latest News</h1>
-          <button class="btn btn2-- mt-5 scroll-animate">All-Blog Posts</button>
+        <div class="container d-flex justify-content-between mx-5">
+          <h1 class="mt-5 fw-bold scroll-animate ms-5">Latest News</h1>
+          <div class="btn-wrapper2 me-3 mt-5">
+            <button class="btn btn--2">All — Blog Posts</button>
+            <span class="icon2">
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </div>
         </div>
       </div>
       <!-- blog-section -->
@@ -2385,14 +2786,14 @@
     <footer id="section12" class="section footer bg-light">
       <div class="container line mb-5">
         <div class="d-flex justify-content-between m-5">
-          <h1 class="mt-3 fw-bold w-50">
+          <h2 class="mt-3 fw-bold w-50">
             Contact Us for a Free Consultation Today.
-          </h1>
-          <div class="btn-wrapper">
-            <span class="icon">
+          </h2>
+          <div class="btn-wrapper2 me-3 mt-5">
+            <button class="btn btn--2">Contact US — Now</button>
+            <span class="icon2">
               <i class="fa-solid fa-arrow-right"></i>
             </span>
-            <button class="btn btn-- mt-5">Contact US — Now</button>
           </div>
         </div>
       </div>
@@ -2400,7 +2801,7 @@
       <div class="footer-container container row">
         <div class="footer-logo col-md-3">
           <h2>digiqu<span class="dot">.</span></h2>
-          <p class="text-secondary mt-3">
+          <p class="text-secondary para-text mt-3">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit... Lorem
             ipsum dolor, sit amet consectetur adipisicing elit. Minima,
             voluptates!
@@ -2408,43 +2809,43 @@
         </div>
 
         <div class="footer-section col-md-3">
-          <h5 class="fw-bold mb-4">Navigations</h5>
+          <h6 class="fw-bold mb-4">Navigations</h6>
           <ul>
-            <li class="mb-2 text-secondary color">
+            <li class="mb-2 text-secondary para-text color">
               <i class="fa-solid fa-circle"></i>FAQ's
             </li>
-            <li class="mb-2 text-secondary color">
+            <li class="mb-2 text-secondary para-text color">
               <i class="fa-solid fa-circle"></i>Privacy Policy
             </li>
-            <li class="mb-2 text-secondary color">
+            <li class="mb-2 text-secondary para-text color">
               <i class="fa-solid fa-circle"></i>Term & Conditions
             </li>
           </ul>
         </div>
         <div class="footer-section col-md-3">
-          <h5 class="fw-bold mb-4">Company</h5>
+          <h6 class="fw-bold mb-4">Company</h6>
           <ul>
-            <li class="mb-2 text-secondary color">
+            <li class="mb-2 text-secondary para-text color">
               <i class="fa-solid fa-circle"></i>About
             </li>
-            <li class="mb-2 text-secondary color">
+            <li class="mb-2 text-secondary para-text color">
               <i class="fa-solid fa-circle"></i>Team
             </li>
-            <li class="mb-2 text-secondary color">
+            <li class="mb-2 text-secondary para-text color">
               <i class="fa-solid fa-circle"></i>Contact
             </li>
           </ul>
         </div>
         <div class="footer-section col-md-3">
-          <h5 class="fw-bold mb-4">Contact Information</h5>
+          <h6 class="fw-bold mb-4">Contact Information</h6>
           <ul>
-            <li class="mb-2 text-secondary color">
+            <li class="mb-2 text-secondary para-text color">
               <i class="fas fa-map-marker-alt"></i> 4096 Modesto, CA 95350, USA
             </li>
-            <li class="mb-2 text-secondary color">
+            <li class="mb-2 text-secondary para-text color">
               <i class="fas fa-phone"></i> +12094728764
             </li>
-            <li class="mb-2 text-secondary color">
+            <li class="mb-2 text-secondary para-text color">
               <i class="fas fa-envelope"></i> info@digiqu.com
             </li>
           </ul>

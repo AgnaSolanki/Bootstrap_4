@@ -1,32 +1,36 @@
-// textimonial
-
+// Testimonial slider
 const slider = document.getElementById("slider");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
-
 const cardWidth = slider.querySelector(".testimonial-card").offsetWidth + 300;
 
 nextBtn.addEventListener("click", () => {
   slider.scrollBy({ left: cardWidth, behavior: "smooth" });
 });
-
 prevBtn.addEventListener("click", () => {
   slider.scrollBy({ left: -cardWidth, behavior: "smooth" });
 });
 
+// Navbar animation
 const navContainer = document.querySelector(".navbar-nav");
 const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
-
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
     navContainer.classList.remove("animate-all");
-
     navContainer.classList.add("animate-all");
+
+    // Reset scroll animations
+    const scrollEls = document.querySelectorAll(".scroll-animate");
+    scrollEls.forEach((el) => {
+      el.classList.remove("visible");
+      observer.observe(el);
+    });
   });
 });
+
+// CTA banner animation
 document.addEventListener("DOMContentLoaded", function () {
   const banner = document.querySelector(".cta-banner");
-
   const observer = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach((entry) => {
@@ -36,14 +40,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     },
-    {
-      threshold: 0.5,
-    }
+    { threshold: 0.5 }
   );
-
-  // Start observing the .cta-banner
   observer.observe(banner);
 });
+
+// Video modal logic
 const videoModal = document.getElementById("videoModal");
 const videoIframe = document.getElementById("videoIframe");
 const videoTrigger = document.getElementById("videoTrigger");
@@ -52,46 +54,38 @@ const closeVideoModal = document.getElementById("closeVideoModal");
 const closeBtn = document.getElementById("closeBtn");
 
 const youtubeURL = "https://www.youtube.com/embed/MLpWrANjFbI?autoplay=1";
-
 function openModal() {
   videoModal.classList.remove("d-none");
   videoIframe.src = youtubeURL;
 }
-
 function closeModal() {
   videoModal.classList.add("d-none");
   videoIframe.src = "";
 }
-
 videoTrigger.addEventListener("click", openModal);
 videoBtn.addEventListener("click", openModal);
 closeVideoModal.addEventListener("click", closeModal);
 closeBtn.addEventListener("click", closeModal);
 
+// Scroll animation observer
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.1 }
+);
 document.addEventListener("DOMContentLoaded", function () {
   const elements = document.querySelectorAll(".scroll-animate");
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target); // Animate once
-        }
-      });
-    },
-    {
-      threshold: 0.1,
-    }
-  );
-
   elements.forEach((el) => observer.observe(el));
 });
 
-//show section
-
+// Show/Hide sections based on page
 function showSections(page) {
-  // Hide all sections
   document.querySelectorAll(".section").forEach((section) => {
     section.classList.remove("show");
   });
@@ -102,7 +96,7 @@ function showSections(page) {
   } else {
     navbar.classList.remove("navbar-hidden");
   }
-  // Control what sections to show
+
   const pages = {
     home: [
       "section1",
@@ -123,13 +117,20 @@ function showSections(page) {
       "section2",
       "section3",
       "section4",
+      "section9",
       "section10",
       "section12",
     ],
     services: ["section14", "section4", "section5", "section9", "section12"],
-
+    serviceDetails: [
+      "section29",
+      "section30",
+      "section31",
+      "section9",
+      "section12",
+    ],
     portfolio: ["section10", "section24", "section15", "section12"],
-    faq: ["section16", "section26", "section12"],
+    faq: ["section16", "section9", "section26", "section12"],
     team: ["section17", "section25", "section9", "section12"],
     price: ["section18", "section27", "section12"],
     404: ["section19", "section12"],
@@ -145,9 +146,9 @@ function showSections(page) {
     });
   }
 }
-// Show all by default on page load
 window.onload = () => showSections("home");
 
+// Additional CTA animation check
 document.addEventListener("DOMContentLoaded", function () {
   const ctaBanner = document.querySelector(".cta-banner");
 
@@ -159,16 +160,27 @@ document.addEventListener("DOMContentLoaded", function () {
   function checkVisibility() {
     if (isInViewport(ctaBanner)) {
       ctaBanner.classList.add("animate");
-      window.removeEventListener("scroll", checkVisibility); // run only once
+      window.removeEventListener("scroll", checkVisibility);
     }
   }
 
   window.addEventListener("scroll", checkVisibility);
-  checkVisibility(); // in case it's already visible
+  checkVisibility();
 });
+
+// Mobile navbar toggle
 document
   .querySelector(".navbar-toggler")
   .addEventListener("click", function () {
     const navbarNav = document.querySelector(".navbar-nav");
     navbarNav.classList.remove("animate-all");
   });
+
+// Circle arrow button active state
+const buttons = document.querySelectorAll(".circle-arrow");
+buttons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    buttons.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+  });
+});
