@@ -84,13 +84,14 @@ document.addEventListener("DOMContentLoaded", function () {
   elements.forEach((el) => observer.observe(el));
 });
 
-// Show/Hide sections based on page
-function showSections(page) {
+function showSections(page, addToHistory = true) {
   document.querySelectorAll(".section").forEach((section) => {
     section.classList.remove("show");
   });
 
   const navbar = document.getElementById("mainNav");
+
+  // Hide navbar on "comming"
   if (page === "comming") {
     navbar.classList.add("navbar-hidden");
   } else {
@@ -129,7 +130,7 @@ function showSections(page) {
       "section9",
       "section12",
     ],
-    portfolio: ["section10", "section24", "section15", "section12"],
+    portfolio: ["section10", "section9", "section24", "section15", "section12"],
     faq: ["section16", "section9", "section26", "section12"],
     team: ["section17", "section25", "section9", "section12"],
     price: ["section18", "section27", "section12"],
@@ -146,7 +147,12 @@ function showSections(page) {
     });
   }
 }
-window.onload = () => showSections("home");
+
+// On first load
+window.onload = () => {
+  const hash = location.hash.replace("#", "") || "home";
+  showSections(hash, false);
+};
 
 // Additional CTA animation check
 document.addEventListener("DOMContentLoaded", function () {
