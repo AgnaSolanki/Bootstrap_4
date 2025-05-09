@@ -32,11 +32,11 @@ body {
   font-size: 40px;
 }
 .navbar-dark {
-  height: 50px !important;
+  height: 54px !important;
 }
 .logo-img:hover,
-:focus,
-:active {
+.logo-img:focus,
+.logo-img:active {
   background-color: rgb(26, 24, 24) !important;
 }
 .heading-text {
@@ -54,14 +54,12 @@ body {
   font-size: small;
   font-weight: 500;
 }
-.btn-btn:hover {
-  background-color: #75b130;
-  color: white;
-}
+
 .navbar-nav .nav-item :focus {
   background-color: #fff;
   color: #41d65a;
 }
+
 /* Ensure nav links are left-aligned in toggled state (small screen) */
 @media (max-width: 991.98px) {
   .navbar-nav {
@@ -141,8 +139,8 @@ body {
 }
 
 .nav-link:hover,
-:focus,
-:active {
+.nav-link:focus,
+.nav-link:active {
   color: #63d471;
   background-color: white !important;
 }
@@ -153,7 +151,6 @@ body {
 .custom-toggler {
   border: none;
   background: transparent;
-  padding: 0;
 }
 
 /* Container for the 3 lines */
@@ -325,13 +322,17 @@ body {
 }
 
 .logo-carousel {
-  overflow: hidden;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
   width: 100%;
   background: #fff;
   padding: 1rem 0;
   position: relative;
 }
-
+.logo-carousel::-webkit-scrollbar {
+  display: none;
+}
 .logo-track {
   display: flex;
   gap: var(--gap);
@@ -1620,10 +1621,10 @@ input::placeholder {
 
 .menu-open,
 .menu-close {
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
   position: absolute;
-  top: 2rem;
+  top: 3rem;
   right: 1rem;
   z-index: 2;
   color: #000;
