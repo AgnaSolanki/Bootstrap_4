@@ -28,6 +28,20 @@ navLinks.forEach((link) => {
   });
 });
 
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    // Only add animation on screens wider than 768px
+    if (window.innerWidth > 768) {
+      navContainer.classList.remove("animate-all");
+      void navContainer.offsetWidth; // force reflow to restart animation
+      navContainer.classList.add("animate-all");
+    } else {
+      // Ensure no animation on small screens
+      navContainer.classList.remove("animate-all");
+    }
+  });
+});
+
 // CTA banner animation
 document.addEventListener("DOMContentLoaded", function () {
   const banner = document.querySelector(".cta-banner");
@@ -92,11 +106,7 @@ function showSections(page, addToHistory = true) {
   const navbar = document.getElementById("mainNav");
 
   // Hide navbar on "comming"
-  if (page === "comming") {
-    navbar.classList.add("navbar-hidden");
-  } else {
-    navbar.classList.remove("navbar-hidden");
-  }
+  navbar.classList.remove("navbar-hidden");
 
   const pages = {
     home: [
@@ -135,7 +145,7 @@ function showSections(page, addToHistory = true) {
     team: ["section17", "section25", "section9", "section12"],
     price: ["section18", "section27", "section12"],
     404: ["section19", "section12"],
-    comming: ["section28"],
+
     blog: ["section20", "section21", "section9", "section12"],
     contact: ["section23", "contactMap", "section22", "section12"],
   };
